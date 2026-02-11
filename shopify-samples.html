@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopify Samples - Ivy Krystel Napoco</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root{
+  --primary:#2a4365;
+  --accent:#4299e1;
+  --bg:#f7fafc;
+  --text:#4a5568;
+  --muted:#718096;
+  --shadow:0 4px 10px rgba(0,0,0,.1);
+  --heading:'Playfair Display',serif;
+  --body:'Poppins',sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:var(--body);
+  color:var(--text);
+  background:#fff;
+  padding-top:80px;
+}
+
+a{text-decoration:none;color:inherit}
+img{width:100%;border-radius:8px}
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  z-index:999;
+}
+
+nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+}
+
+.logo{
+  font-family:var(--heading);
+  font-size:2rem;
+  color:var(--primary);
+}
+.logo span{color:var(--accent)}
+
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+.nav-links a.active{color:var(--accent)}
+
+main{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+h1{
+  font-family:var(--heading);
+  font-size:3rem;
+  color:var(--primary);
+  text-align:center;
+}
+h1::after{
+  content:'';
+  width:80px;
+  height:4px;
+  background:var(--accent);
+  display:block;
+  margin:15px auto;
+}
+
+.subtitle{
+  text-align:center;
+  max-width:800px;
+  margin:10px auto 40px;
+  color:var(--muted);
+}
+
+.sample-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:2rem;
+}
+
+.sample-card{
+  background:var(--bg);
+  border-radius:10px;
+  box-shadow:var(--shadow);
+  padding:1.5rem;
+}
+
+.sample-card h3{
+  font-family:var(--heading);
+  color:var(--primary);
+  margin:10px 0;
+}
+
+.sample-card p{
+  font-size:.95rem;
+  color:var(--muted);
+}
+
+.features{
+  margin:10px 0;
+}
+.features li{
+  font-size:.85rem;
+  margin-left:18px;
+}
+
+.actions{
+  margin-top:15px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:8px 14px;
+  background:var(--accent);
+  color:#fff;
+  border-radius:6px;
+  font-size:.85rem;
+}
+
+.btn.secondary{
+  background:#e2e8f0;
+  color:var(--primary);
+}
+
+.disclaimer{
+  background:#edf2f7;
+  padding:20px;
+  border-left:4px solid var(--accent);
+  margin-top:50px;
+  font-size:.9rem;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+footer{
+  background:var(--primary);
+  color:#fff;
+  margin-top:60px;
+  padding:40px 20px 20px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Ivy<span>Napoco</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="works.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<main>
+<h1>Shopify Sample Stores</h1>
+<p class="subtitle">
+These stores showcase my Shopify skills including theme customization,
+product page setup, collections, and mobile optimization.
+</p>
+
+<div class="sample-grid">
+
+  <div class="sample-card">
+    <img src="Shine_Beauty_&_ Co..png" alt="Salon Store">
+    <h3>Salon Store</h3>
+    <p>Clean Shopify layout focused on conversion and product presentation.</p>
+
+    <ul class="features">
+      <li>Custom theme styling</li>
+      <li>Product & collection setup</li>
+      <li>Product page optimization</li>
+      <li>Mobile-first design</li>
+    </ul>
+
+    <div class="actions">
+      <a href="https://myshinebeauty.com/" target="_blank" class="btn">View Store</a>
+    </div>
+  </div>
+
+  <div class="sample-card">
+    <img src="Landing_page.png" alt="Landing Page">
+    <h3>Shopify Landing Page</h3>
+    <p>High-converting Shopify landing page layout.</p>
+
+    <ul class="features">
+      <li>Landing page design</li>
+      <li>Sections customization</li>
+      <li>CTA optimization</li>
+    </ul>
+
+    <div class="actions">
+      <a href="https://foxtailhairsalon.com/" target="_blank" class="btn">View Store</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="disclaimer">
+<strong>Disclaimer:</strong><br><br>
+
+I am currently working as an Assistant to a Virtual Assistant who manages clients in the salon industry, including businesses that specialize in creating and managing Shopify websites for salon owners. Through this role, I am continuously gaining hands-on experience in Shopify store setup, customization, and optimization, while also exploring and expanding my own skills in web design and development.<br><br>
+
+Some of the sample stores presented on this page were recreated, redesigned, or independently built by me for learning, demonstration, and portfolio purposes only. These works are not intended to claim ownership of the original businesses, brands, or store concepts.<br><br>
+
+All original brand names, store identities, and business content remain the property of their respective owners. Proper respect and credit are given to the rightful business owners, as well as to my employer (the Virtual Assistant) and their client.<br><br>
+
+These samples are strictly for portfolio demonstration and professional growth.
+</div>
+
+</main>
+
+<footer>
+© 2026 Ivy Krystel Napoco. All rights reserved.
+</footer>
+
+</body>
+</html>

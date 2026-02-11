@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About - Ivy Krystel Napoco</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+  :root {
+    --primary-color: #2a4365;
+    --secondary-color: #f7fafc;
+    --accent-color: #4299e1;
+    --dark-accent: #1a365d;
+    --text-color: #4a5568;
+    --light-text: #718096;
+    --background-color: #ffffff;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Navigation */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .logo span {
+    color: var(--accent-color);
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  .nav-links a.active {
+    color: var(--accent-color);
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Main Content */
+  main {
+    max-width: 1200px;
+    margin: 120px auto 3rem;
+    padding: 0 20px;
+  }
+  
+  .about-section {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: center;
+  }
+  
+  .about-section > div {
+    flex: 1;
+  }
+  
+  .about-section img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+  }
+  
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    line-height: 1.2;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+    margin: 3rem 0 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h1::after, h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 15px 0 0;
+  }
+  
+  h2::after {
+    width: 60px;
+    height: 3px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Skills Section */
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .skill-category {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .skill-item {
+    margin-bottom: 1.2rem;
+  }
+  
+  .skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skill-name {
+    font-weight: 500;
+  }
+  
+  .skill-percent {
+    color: var(--accent-color);
+    font-weight: 600;
+  }
+  
+  .skill-bar {
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .skill-progress {
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+  }
+  
+  /* Education Section */
+  .education-container {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 3rem;
+  }
+  
+  .education-item {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .education-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .education-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+  }
+  
+  .education-item::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 20px;
+    bottom: -25px;
+    width: 1px;
+    background-color: var(--accent-color);
+  }
+  
+  .education-item:last-child::after {
+    display: none;
+  }
+  
+  .education-year {
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 0.3rem;
+  }
+  
+  .education-degree {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  
+  .education-school {
+    color: var(--light-text);
+    font-style: italic;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 4rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+  
+  .footer-col h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .footer-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+  }
+  
+  .footer-col p {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .footer-links {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--accent-color);
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .skills-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 80px);
+      background-color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      transition: left 0.3s ease;
+    }
+    
+    .nav-links.active {
+      left: 0;
+    }
+    
+    .hamburger {
+      display: block;
+    }
+    
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    h1::after, h2::after {
+      margin: 15px auto 0;
+    }
+    
+    .about-section img {
+      max-width: 80%;
+      margin: 0 auto 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .logo {
+      font-size: 1.5rem;
+    }
+    
+    h1 {
+      font-size: 2.2rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header id="header">
+    <nav>
+      <div class="logo">Ivy <span>Napoco</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-section">
+      <div>
+        <h1>About Me</h1>
+        <p>Hello! I'm Ivy Krystel Napoco, a passionate Graphic Designer, Web Designer, and Developer dedicated to crafting engaging visual experiences and functional websites. My journey started with a love for art and technology, leading me to master tools like Canva, WordPress, HTML, PHP, and Shopify.</p>
+        <p>With years of experience, I have helped businesses and individuals transform their ideas into beautiful, user-friendly designs that connect with their audience. I believe great design tells a story and solves problems — and that's what drives me.</p>
+        <p>When I'm not designing, you can find me exploring new design trends, learning new technologies, or enjoying a good cup of coffee while sketching my next creative project.</p>
+      </div>
+      <div>
+        <img src="imagebanner.png" alt="Portrait of Ivy Krystel Napoco" />
+      </div>
+    </section>
+
+    <section>
+      <h2>My Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Design Skills</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Graphic Design</span>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">UI/UX Design</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Logo Design</span>
+              <span class="skill-percent">92%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 92%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Canva</span>
+              <span class="skill-percent">98%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 98%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Development Skills</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">HTML/CSS</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">PHP</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">WordPress</span>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 88%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Other Skills</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Shopify</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">SEO</span>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Project Management</span>
+              <span class="skill-percent">82%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 82%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Adobe Creative Suite</span>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 88%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education Background</h2>
+      <div class="education-container">
+        <div class="education-item">
+          <div>
+            <div class="education-year">2021 - Present</div>
+            <div class="education-degree">Bachelor of Science in Information Technology</div>
+            <div class="education-school">Northeastern Mindanao Colleges</div>
+           
+          </div>
+        </div>
+        <div class="education-item">
+          <div>
+            <div class="education-year">2018 - 2020</div>
+            <div class="education-degree">Science Technology Engineering Mathematics</div>
+            <div class="education-school">STI College Surigao</div>
+           
+          </div>
+        </div>
+        <div class="education-item">
+          <div>
+            <div class="education-year">2014 - 2018</div>
+            <div class="education-degree"></div>
+            <div class="education-school">GNHSI</div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>About Me</h3>
+        <p>Graphic Designer, Web Designer, and Developer passionate about creating beautiful, functional designs.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="works.html">Works</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/iknap0c8/"><i class="fab fa-facebook"></i></a>
+          <a href="https://github.com/ikn13"><i class="fab fa-github"></i></a>
+          <a href="www.linkedin.com/in/ivy-krystel-napoco-927964267"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/yvi_krystel/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p style="color:white;">&copy; 2025 Ivy Krystel Napoco. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky header
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Animate skill bars on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const skillBars = document.querySelectorAll('.skill-progress');
+      
+      const animateSkillBars = () => {
+        skillBars.forEach(bar => {
+          const width = bar.style.width;
+          bar.style.width = '0';
+          setTimeout(() => {
+            bar.style.width = width;
+          }, 100);
+        });
+      };
+      
+      // Run animation when skills section comes into view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateSkillBars();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {threshold: 0.2});
+      
+      const skillsSection = document.querySelector('.skills-container');
+      if (skillsSection) {
+        observer.observe(skillsSection);
+      }
+    });
+  </script>
+</body>
+</html>
