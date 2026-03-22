@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Website Samples - Ivy Krystel Napoco</title>
+
+<title>Website Sample Portfolio | Web Designer & E-Commerce Virtual Assistant - Ivy Krystel Napoco</title>
+
+<meta name="description" content="Website sample portfolio by Ivy Krystel Napoco, a Web Designer and E-Commerce Virtual Assistant specializing in responsive website development, Shopify stores, landing pages, and UI/UX design for businesses." />
+
+<meta name="keywords" content="Web Designer Philippines, Website Samples, E-Commerce Virtual Assistant, Shopify Expert, Landing Page Design, UI UX Designer, Website Development Portfolio, Responsive Web Design, Virtual Assistant Web Services" />
+
+<meta name="author" content="Ivy Krystel Napoco" />
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,6 +28,7 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
   font-family:var(--body);
   color:var(--text);
@@ -31,6 +39,7 @@ body{
 a{text-decoration:none;color:inherit}
 img{width:100%;border-radius:8px}
 
+/* HEADER */
 header{
   position:fixed;
   top:0;
@@ -54,6 +63,7 @@ nav{
   font-size:2rem;
   color:var(--primary);
 }
+
 .logo span{color:var(--accent)}
 
 .nav-links{
@@ -61,8 +71,10 @@ nav{
   display:flex;
   gap:30px;
 }
+
 .nav-links a.active{color:var(--accent)}
 
+/* MAIN */
 main{
   max-width:1200px;
   margin:auto;
@@ -75,6 +87,7 @@ h1{
   color:var(--primary);
   text-align:center;
 }
+
 h1::after{
   content:'';
   width:80px;
@@ -91,12 +104,14 @@ h1::after{
   color:var(--muted);
 }
 
+/* GRID */
 .sample-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:2rem;
 }
 
+/* CARD */
 .sample-card{
   background:var(--bg);
   border-radius:10px;
@@ -104,6 +119,11 @@ h1::after{
   padding:1.5rem;
   display:flex;
   flex-direction:column;
+  transition:.3s;
+}
+
+.sample-card:hover{
+  transform:translateY(-5px);
 }
 
 .sample-card h3{
@@ -118,6 +138,7 @@ h1::after{
   flex-grow:1;
 }
 
+/* BUTTON */
 .actions{
   margin-top:15px;
 }
@@ -181,6 +202,7 @@ footer{
 
 <body>
 
+<!-- HEADER -->
 <header>
 <nav>
   <div class="logo">Ivy <span>Napoco</span></div>
@@ -194,44 +216,59 @@ footer{
 </nav>
 </header>
 
+<!-- MAIN -->
 <main>
-<h1>Personal Website Sample</h1>
+
+<h1>Website Development Portfolio</h1>
+
 <p class="subtitle">
-These personal websites showcase my web designing and web development skills.
+Explore website sample projects developed by a Web Designer and E-Commerce Virtual Assistant specializing in responsive web design, UI/UX optimization, Shopify integration, and business website development.
 </p>
 
+<!-- GRID -->
 <div class="sample-grid">
 
+  <!-- 1 -->
   <div class="sample-card">
-    <img src="Kacey.png" alt="Personal Website">
+    <img src="Kacey.png" alt="Professional Personal Website Portfolio Example">
     <h3>Professional Personal Website</h3>
-    <p>Clean and responsive personal portfolio website with modern layout and mobile optimization.</p>
+    <p>
+      A modern personal portfolio website designed with responsive layout, clean UI/UX structure, and mobile optimization for professional online branding.
+    </p>
     <div class="actions">
-      <a href="https://www.ashlynkaceygojetia.com/" target="_blank" class="btn">View Site</a>
+      <a href="https://www.ashlynkaceygojetia.com/" target="_blank" class="btn">View Live Website</a>
     </div>
   </div>
 
+  <!-- 2 -->
   <div class="sample-card">
-    <img src="Kimmy.png" alt="Kimmy Site">
+    <img src="Kimmy.png" alt="Personal Portfolio Website UI UX Design">
     <h3>Personal Portfolio Website</h3>
-    <p>Modern UI/UX structured personal website designed for professional online presence.</p>
+    <p>
+      A structured UI/UX-focused personal website designed to enhance online presence, branding, and professional visibility.
+    </p>
     <div class="actions">
-      <a href="https://www.kimmarycabusao.com/" target="_blank" class="btn">View Site</a>
+      <a href="https://www.kimmarycabusao.com/" target="_blank" class="btn">View Live Website</a>
     </div>
   </div>
 
+  <!-- 3 -->
   <div class="sample-card">
-    <img src="Clavie.png" alt="Clavie Site">
+    <img src="Clavie.png" alt="Creative Responsive Website Design Sample">
     <h3>Creative Personal Website</h3>
-    <p>Responsive personal site showcasing clean design, optimized layout, and smooth navigation.</p>
+    <p>
+      A fully responsive website showcasing modern design principles, clean layout, and optimized user experience for better engagement.
+    </p>
     <div class="actions">
-      <a href="https://clavienovahcabas.com/" target="_blank" class="btn">View Site</a>
+      <a href="https://clavienovahcabas.com/" target="_blank" class="btn">View Live Website</a>
     </div>
   </div>
 
 </div>
+
 </main>
 
+<!-- FOOTER -->
 <footer>
 
 <div class="footer-container">
@@ -239,17 +276,16 @@ These personal websites showcase my web designing and web development skills.
   <div>
     <div class="footer-title">About Me</div>
     <div class="footer-text">
-      I am Ivy Krystel Napoco, a Web Designer and Shopify Specialist focused on building clean,
-      responsive, and functional websites. I continuously improve my skills in web development,
-      Shopify store setup, and UI/UX design while helping businesses grow online.
+      I am Ivy Krystel Napoco, a Web Designer and E-Commerce Virtual Assistant specializing in responsive website development, Shopify store setup,eBay and any other business online platform, UI/UX design, and digital business solutions that help brands grow online.
     </div>
   </div>
 
   <div>
     <div class="footer-title">Services</div>
     <div class="footer-links">
-      <a href="#">Shopify Store Setup</a>
-      <a href="#">Website Design</a>
+      <a href="#">Website Development</a>
+       <a href="#">Shopify Store Setup</a>
+      <a href="#">Product Listing</a>
       <a href="#">Landing Page Design</a>
       <a href="#">UI/UX Optimization</a>
     </div>
@@ -267,11 +303,10 @@ These personal websites showcase my web designing and web development skills.
 </div>
 
 <div class="copyright">
-© 2026 Ivy Krystel Napoco. All rights reserved.
+© 2026 Ivy Krystel Napoco | Web Designer | E-Commerce Virtual Assistant 
 </div>
 
 </footer>
 
 </body>
 </html>
- 
