@@ -3,237 +3,594 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shopify Samples - Ivy Krystel Napoco</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Shopify Samples - Ivy Krystel Napoco | E-Commerce VA</title>
+<meta name="description" content="Shopify store samples showcasing theme customization, product listing, collections, and mobile optimization by Ivy Krystel Napoco." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <style>
-:root{
-  --primary:#2a4365;
-  --accent:#4299e1;
-  --bg:#f7fafc;
-  --text:#4a5568;
-  --muted:#718096;
-  --shadow:0 4px 10px rgba(0,0,0,.1);
-  --heading:'Playfair Display',serif;
-  --body:'Poppins',sans-serif;
+:root {
+  --primary: #0f2b3d;
+  --primary-dark: #082032;
+  --accent: #2c7da0;
+  --accent-light: #61a5c2;
+  --gray-bg: #f8fafc;
+  --text-dark: #1e293b;
+  --text-muted: #475569;
+  --white: #ffffff;
+  --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
+  --shadow-md: 0 20px 25px -5px rgba(0,0,0,0.08);
+  --transition: all 0.3s ease;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:var(--body);
-  color:var(--text);
-  background:#fff;
-  padding-top:80px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a{text-decoration:none;color:inherit}
-img{width:100%;border-radius:8px}
-
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#fff;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
-  z-index:999;
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
-nav{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 20px;
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.logo{
-  font-family:var(--heading);
-  font-size:2rem;
-  color:var(--primary);
-}
-.logo span{color:var(--accent)}
-
-.nav-links{
-  list-style:none;
-  display:flex;
-  gap:30px;
-}
-.nav-links a.active{color:var(--accent)}
-
-main{
-  max-width:1200px;
-  margin:auto;
-  padding:40px 20px;
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: var(--transition);
 }
 
-h1{
-  font-family:var(--heading);
-  font-size:3rem;
-  color:var(--primary);
-  text-align:center;
-}
-h1::after{
-  content:'';
-  width:80px;
-  height:4px;
-  background:var(--accent);
-  display:block;
-  margin:15px auto;
+header.scrolled {
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.subtitle{
-  text-align:center;
-  max-width:800px;
-  margin:10px auto 40px;
-  color:var(--muted);
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.sample-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:2rem;
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
 }
 
-.sample-card{
-  background:var(--bg);
-  border-radius:10px;
-  box-shadow:var(--shadow);
-  padding:1.5rem;
+.logo span {
+  color: var(--accent);
 }
 
-.sample-card h3{
-  font-family:var(--heading);
-  color:var(--primary);
-  margin:10px 0;
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
 }
 
-.sample-card p{
-  font-size:.95rem;
-  color:var(--muted);
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: var(--transition);
 }
 
-.features{
-  margin:10px 0;
-}
-.features li{
-  font-size:.85rem;
-  margin-left:18px;
+.nav-link:hover, .nav-link.active {
+  color: var(--accent);
 }
 
-.actions{
-  margin-top:15px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
+.hamburger {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--primary);
 }
 
-.btn{
-  padding:8px 14px;
-  background:var(--accent);
-  color:#fff;
-  border-radius:6px;
-  font-size:.85rem;
+/* Main Content */
+main {
+  max-width: 1280px;
+  margin: 120px auto 3rem;
+  padding: 0 2rem;
+  animation: fadeIn 0.6s ease-out;
 }
 
-.btn.secondary{
-  background:#e2e8f0;
-  color:var(--primary);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.disclaimer{
-  background:#edf2f7;
-  padding:20px;
-  border-left:4px solid var(--accent);
-  margin-top:50px;
-  font-size:.9rem;
-  color:var(--muted);
-  line-height:1.6;
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-footer{
-  background:var(--primary);
-  color:#fff;
-  margin-top:60px;
-  padding:40px 20px 20px;
-  text-align:center;
+h1::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  display: block;
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.subtitle {
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto 40px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Sample Grid - 3 cards per row */
+.sample-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.sample-card {
+  background: var(--gray-bg);
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  transition: var(--transition);
+  border: 1px solid #eef2f6;
+}
+
+.sample-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.sample-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.sample-card:hover img {
+  transform: scale(1.02);
+}
+
+.sample-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.sample-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.features {
+  margin: 15px 0;
+  list-style: none;
+}
+
+.features li {
+  font-size: 0.85rem;
+  padding: 6px 0 6px 24px;
+  position: relative;
+  color: var(--text-dark);
+}
+
+.features li::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--primary);
+  transform: translateX(5px);
+}
+
+.btn i {
+  font-size: 0.8rem;
+}
+
+/* Disclaimer */
+.disclaimer {
+  background: var(--gray-bg);
+  padding: 20px 25px;
+  border-left: 4px solid var(--accent);
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  border-radius: 12px;
+}
+
+.disclaimer i {
+  color: var(--accent);
+  margin-right: 8px;
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 3rem 0 1rem;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-col h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.footer-col h3 span {
+  color: var(--accent-light);
+}
+
+.footer-col p {
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  background: rgba(255,255,255,0.1);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+  color: white;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  background: var(--accent);
+  transform: translateY(-3px);
+}
+
+.btn-small {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-small:hover {
+  background: white;
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #a0aec0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .sample-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: 0.3s;
+    box-shadow: var(--shadow-md);
+  }
+  .nav-links.active {
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .sample-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+  .footer-col h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  .sample-card {
+    padding: 1rem;
+  }
+  .actions {
+    flex-direction: column;
+  }
+  .btn {
+    justify-content: center;
+  }
 }
 </style>
 </head>
-
 <body>
 
-  <header id="header">
-    <div class="container">
-      <nav>
-        <a href="index.html" class="logo">Ivy<span>Napoco</span></a>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="works.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <i class="fas fa-bars"></i>
-        </div>
-      </nav>
+<!-- HEADER -->
+<header id="main-header">
+  <div class="header-container">
+    <a href="index.html" class="logo">Ivy<span>Napoco</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="works.html" class="nav-link">Portfolio</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
     </div>
-  </header>
+  </div>
+</header>
 
 <main>
-<h1>Shopify Sample Stores</h1>
-<p class="subtitle">
-These stores showcase my Shopify skills including theme customization,
-product page setup, collections, and mobile optimization.
-</p>
+  <h1>Shopify Sample Stores</h1>
+  <p class="subtitle">
+    These stores showcase my Shopify skills including theme customization,
+    product page setup, collections, and mobile optimization.
+  </p>
 
-<div class="sample-grid">
+  <div class="sample-grid">
+    <div class="sample-card">
+      <img src="Shine_Beauty_&_ Co..png" alt="Salon Store">
+      <h3>Salon & Beauty Store</h3>
+      <p>Clean Shopify layout focused on conversion and product presentation for beauty industry.</p>
+      <ul class="features">
+        <li>Custom theme styling</li>
+        <li>Product & collection setup</li>
+        <li>Product page optimization</li>
+        <li>Mobile-first design</li>
+        <li>SEO optimized listings</li>
+      </ul>
+      <div class="actions">
+        <a href="https://myshinebeauty.com/" target="_blank" class="btn">View Live Store <i class="fas fa-external-link-alt"></i></a>
+      </div>
+    </div>
 
-  <div class="sample-card">
-    <img src="Shine_Beauty_&_ Co..png" alt="Salon Store">
-    <h3>Salon Store</h3>
-    <p>Clean Shopify layout focused on conversion and product presentation.</p>
+    <div class="sample-card">
+      <img src="foxtail.png" alt="Landing Page">
+      <h3>High-Converting Landing Page</h3>
+      <p>Optimized Shopify landing page designed for maximum conversion and user engagement.</p>
+      <ul class="features">
+        <li>Landing page design</li>
+        <li>Sections customization</li>
+        <li>CTA optimization</li>
+        <li>Fast loading performance</li>
+      </ul>
+      <div class="actions">
+        <a href="https://foxtailhairsalon.com/" target="_blank" class="btn">View Live Store <i class="fas fa-external-link-alt"></i></a>
+      </div>
+    </div>
 
-    <ul class="features">
-      <li>Custom theme styling</li>
-      <li>Product & collection setup</li>
-      <li>Product page optimization</li>
-      <li>Mobile-first design</li>
-    </ul>
-
-    <div class="actions">
-      <a href="https://myshinebeauty.com/" target="_blank" class="btn">View Store</a>
+    <div class="sample-card">
+      <img src="https://placehold.co/600x400/1a365d/ffffff?text=Fashion+Store" alt="Fashion Shopify Store">
+      <h3>Fashion E-commerce Store</h3>
+      <p>Complete Shopify setup for fashion brand with collections, variants, and seamless checkout.</p>
+      <ul class="features">
+        <li>Product variant management</li>
+        <li>Collection organization</li>
+        <li>Inventory tracking</li>
+        <li>Payment gateway setup</li>
+      </ul>
+      <div class="actions">
+        <a href="#" class="btn">View Demo <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
   </div>
 
-  <div class="sample-card">
-    <img src="foxtail.png" alt="Landing Page">
-    <h3>Shopify Landing Page</h3>
-    <p>High-converting Shopify landing page layout.</p>
-
-    <ul class="features">
-      <li>Landing page design</li>
-      <li>Sections customization</li>
-      <li>CTA optimization</li>
-    </ul>
-
-    <div class="actions">
-      <a href="https://foxtailhairsalon.com/" target="_blank" class="btn">View Store</a>
-    </div>
+  <div class="disclaimer">
+    <i class="fas fa-info-circle"></i> 
+    <strong>Note:</strong> These are live Shopify stores I've worked on. All client information is confidential, and stores are shared with permission.
   </div>
-
-</div>
-
-
-
 </main>
 
+<!-- FOOTER -->
 <footer>
-© 2026 Ivy Krystel Napoco. All rights reserved.
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>Ivy<span>Napoco</span></h3>
+      <p>E-Commerce Virtual Assistant & Web Designer specializing in Shopify, Amazon, eBay management, and creative solutions.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/iknap0c8/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://github.com/ikn13"><i class="fab fa-github"></i></a>
+        <a href="www.linkedin.com/in/ivy-krystel-napoco-927964267"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/yvi_krystel/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="works.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Work With Me</h3>
+      <p>Ready to start your project? Let's discuss how I can help you achieve your goals.</p>
+      <a href="contact.html" class="btn-small">Get In Touch</a>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2026 Ivy Krystel Napoco | E-Commerce Virtual Assistant & Web Designer. All rights reserved.</p>
+  </div>
 </footer>
 
+<script>
+// Sticky header
+window.addEventListener('scroll', function() {
+  const header = document.getElementById('main-header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if (hamburger) {
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+  });
+}
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
+// Active nav link based on current page
+const currentPage = window.location.pathname.split("/").pop();
+document.querySelectorAll('.nav-link').forEach(link => {
+  const linkPage = link.getAttribute('href');
+  if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  }
+});
+</script>
 </body>
 </html>
