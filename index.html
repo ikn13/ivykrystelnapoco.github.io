@@ -3,1262 +3,1008 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
 <title>E-Commerce Virtual Assistant | Shopify | Amazon | eBay VA | Ivy Napoco</title>
-
 <meta name="description" content="Experienced E-Commerce Virtual Assistant specializing in Shopify product listing, Amazon and eBay store management, data entry, and virtual admin support." />
-<meta name="keywords" content="E-commerce Virtual Assistant, Shopify VA, Amazon Product Listing, eBay VA, Data Entry Specialist, Product Upload, Online Store Assistant" />
-
+<meta name="keywords" content="E-commerce Virtual Assistant, Shopify VA, Amazon Product Listing, eBay VA, Data Entry Specialist" />
 <meta property="og:title" content="E-Commerce Virtual Assistant Portfolio - Ivy Napoco" />
 <meta property="og:description" content="Shopify, Amazon & eBay Virtual Assistant specializing in product listing, data entry, and e-commerce store support." />
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
 <style>
-    :root {
-      --primary-color: #2a4365;
-      --secondary-color: #f7fafc;
-      --accent-color: #4299e1;
-      --dark-accent: #1a365d;
-      --text-color: #4a5568;
-      --light-text: #718096;
-      --background-color: #ffffff;
-      --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      --font-heading: 'Playfair Display', serif;
-      --font-body: 'Poppins', sans-serif;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: var(--font-body);
-      color: var(--text-color);
-      background-color: var(--background-color);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.3s ease;
-    }
-    
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: var(--accent-color);
-      color: white;
-      border-radius: 4px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    
-    .btn:hover {
-      background-color: var(--dark-accent);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    .btn-outline {
-      background-color: transparent;
-      border: 2px solid var(--accent-color);
-      color: var(--accent-color);
-    }
-    
-    .btn-outline:hover {
-      background-color: var(--accent-color);
-      color: white;
-    }
-    
-    section {
-      padding: 80px 0;
-    }
-    
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      color: var(--primary-color);
-      text-align: center;
-      position: relative;
-    }
-    
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background-color: var(--accent-color);
-      margin: 15px auto 0;
-    }
-    
-    /* Navigation */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-    
-    header.scrolled {
-      background-color: rgba(255, 255, 255, 0.98);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-    
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-    }
-    
-    .logo {
-      font-family: var(--font-heading);
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: var(--primary-color);
-    }
-    
-    .logo span {
-      color: var(--accent-color);
-    }
-    
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-    }
-    
-    .nav-links a {
-      font-weight: 500;
-      position: relative;
-      padding: 5px 0;
-    }
-    
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: var(--accent-color);
-      transition: width 0.3s ease;
-    }
-    
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-    
-    .nav-links a.active {
-      color: var(--accent-color);
-    }
-    
-    .hamburger {
-      display: none;
-      cursor: pointer;
-    }
-    
-    /* Hero Section */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding-top: 80px;
-    }
-    
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(42, 67, 101, 0.03) 0%, rgba(66, 153, 225, 0.03) 100%);
-      z-index: -1;
-    }
-    
-    .hero-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      background: linear-gradient(-45deg, #f5f7fa, #e4e8ed, #f5f7fa, #e4e8ed);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      opacity: 0.7;
-    }
-    
-    @keyframes gradientBG {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-    
-    .hero-content {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-    }
-    
-    .hero-text {
-      flex: 1;
-    }
-    
-    .hero-image {
-      flex: 1;
-      position: relative;
-    }
-    
-    .hero-image img {
-      border-radius: 10px;
-      box-shadow: var(--card-shadow);
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
-    }
-    
-    .hero-image:hover img {
-      transform: scale(1.02);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    }
-    
-    .hero-title {
-      font-family: var(--font-heading);
-      font-size: 3.5rem;
-      font-weight: 600;
-      color: var(--primary-color);
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
-    
-    .hero-subtitle {
-      font-size: 1.2rem;
-      color: var(--light-text);
-      margin-bottom: 30px;
-      max-width: 600px;
-    }
-    
-    .position-rotator {
-      height: 2.5rem;
-      overflow: hidden;
-      margin-bottom: 30px;
-    }
-    
-    .position-rotator-inner {
-      display: inline-flex;
-      flex-direction: column;
-      animation: rotatePositions 12s ease infinite;
-    }
-    
-    @keyframes rotatePositions {
-      0%, 20% {
-        transform: translateY(0);
-      }
-      25%, 45% {
-        transform: translateY(-2.5rem);
-      }
-      50%, 70% {
-        transform: translateY(-5rem);
-      }
-      75%, 95% {
-        transform: translateY(-7.5rem);
-      }
-      100% {
-        transform: translateY(-10rem);
-      }
-    }
-    
-    .position {
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: var(--accent-color);
-      height: 2.5rem;
-      display: flex;
-      align-items: center;
-    }
-    
-    .hero-buttons {
-      display: flex;
-      gap: 20px;
-      margin-top: 40px;
-    }
-    
-    /* About Section */
-    .about {
-      background-color: var(--secondary-color);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .about::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyMDQsMjA0LDIwNCwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
-      opacity: 0.3;
-      z-index: 0;
-    }
-    
-    .about-content {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .about-image {
-      flex: 1;
-      position: relative;
-    }
-    
-    .about-image img {
-      border-radius: 10px;
-      box-shadow: var(--card-shadow);
-      transition: transform 0.5s ease;
-    }
-    
-    .about-image:hover img {
-      transform: scale(1.03);
-    }
-    
-    .about-text {
-      flex: 1;
-    }
-    
-    .about-text h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: var(--primary-color);
-    }
-    
-    .about-text p {
-      margin-bottom: 20px;
-      color: var(--text-color);
-    }
-    
-    .skills {
-      margin-top: 30px;
-    }
-    
-    .skills h4 {
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-    }
-    
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    
-    .skill-tag {
-      background-color: var(--accent-color);
-      color: white;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-    }
-    
-    .skill-tag:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Services Section */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .service-card {
-      background-color: white;
-      border-radius: 8px;
-      padding: 30px;
-      box-shadow: var(--card-shadow);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background-color: var(--accent-color);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-    }
-    
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
-    
-    .service-card:hover::before {
-      transform: scaleX(1);
-    }
-    
-    .service-icon {
-      font-size: 2.5rem;
-      color: var(--accent-color);
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
-    
-    .service-card:hover .service-icon {
-      transform: scale(1.1);
-    }
-    
-    .service-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      color: var(--primary-color);
-    }
-    
-    .service-card p {
-      color: var(--light-text);
-      margin-bottom: 20px;
-    }
-    
-    /* Portfolio Section */
-    .portfolio {
-      background-color: var(--secondary-color);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .portfolio::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyMDQsMjA0LDIwNCwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
-      opacity: 0.3;
-      z-index: 0;
-    }
-    
-    .portfolio-filter {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 40px;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .filter-btn {
-      padding: 8px 20px;
-      background-color: transparent;
-      border: 1px solid var(--accent-color);
-      color: var(--accent-color);
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    
-    .filter-btn.active, .filter-btn:hover {
-      background-color: var(--accent-color);
-      color: white;
-    }
-    
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 30px;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .portfolio-item {
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: var(--card-shadow);
-      transition: transform 0.3s ease;
-    }
-    
-    .portfolio-item:hover {
-      transform: translateY(-5px);
-    }
-    
-    .portfolio-img {
-      height: 250px;
-      overflow: hidden;
-    }
-    
-    .portfolio-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    
-    .portfolio-item:hover .portfolio-img img {
-      transform: scale(1.1);
-    }
-    
-    .portfolio-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(42, 67, 101, 0.9) 0%, transparent 100%);
-      padding: 20px;
-      color: white;
-      transform: translateY(100%);
-      transition: transform 0.3s ease;
-    }
-    
-    .portfolio-item:hover .portfolio-overlay {
-      transform: translateY(0);
-    }
-    
-    .portfolio-overlay h3 {
-      margin-bottom: 10px;
-    }
-    
-    /* Team Section */
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .team-member {
-      background-color: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: var(--card-shadow);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-    
-    .team-member:hover {
-      transform: translateY(-10px);
-    }
-    
-    .member-img {
-      height: 250px;
-      overflow: hidden;
-    }
-    
-    .member-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    
-    .team-member:hover .member-img img {
-      transform: scale(1.1);
-    }
-    
-    .member-info {
-      padding: 20px;
-    }
-    
-    .member-info h3 {
-      font-size: 1.3rem;
-      margin-bottom: 5px;
-      color: var(--primary-color);
-    }
-    
-    .member-info p {
-      color: var(--accent-color);
-      font-weight: 500;
-      margin-bottom: 15px;
-    }
-    
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-    
-    .social-links a {
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      background-color: var(--secondary-color);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-color);
-      transition: all 0.3s ease;
-    }
-    
-    .social-links a:hover {
-      background-color: var(--accent-color);
-      color: white;
-      transform: translateY(-3px);
-    }
-    
-    /* Contact Section */
-    .contact {
-      background-color: var(--secondary-color);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .contact::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyMDQsMjA0LDIwNCwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
-      opacity: 0.3;
-      z-index: 0;
-    }
-    
-    .contact-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 50px;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      transition: transform 0.3s ease;
-    }
-    
-    .contact-item:hover {
-      transform: translateX(5px);
-    }
-    
-    .contact-icon {
-      font-size: 1.5rem;
-      color: var(--accent-color);
-    }
-    
-    .contact-text h3 {
-      font-size: 1.2rem;
-      margin-bottom: 5px;
-      color: var(--primary-color);
-    }
-    
-    .contact-text p, .contact-text a {
-      color: var(--light-text);
-    }
-    
-    .contact-text a:hover {
-      color: var(--accent-color);
-    }
-    
-    .contact-form .form-group {
-      margin-bottom: 20px;
-    }
-    
-    .contact-form label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
-    
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-family: var(--font-body);
-      transition: all 0.3s ease;
-    }
-    
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: var(--accent-color);
-      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
-    }
-    
-    .contact-form textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-    
-    /* Footer */
-    footer {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 40px 0 20px;
-      position: relative;
-    }
-    
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(to right, var(--accent-color), var(--dark-accent));
-    }
-    
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      margin-bottom: 40px;
-    }
-    
-    .footer-col h3 {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      position: relative;
-      padding-bottom: 10px;
-    }
-    
-    .footer-col h3::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 2px;
-      background-color: var(--accent-color);
-    }
-    
-    .footer-col p {
-      margin-bottom: 15px;
-      color: rgba(255, 255, 255, 0.8);
-    }
-    
-    .footer-links {
-      list-style: none;
-    }
-    
-    .footer-links li {
-      margin-bottom: 10px;
-    }
-    
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.8);
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-    
-    .footer-links a:hover {
-      color: var(--accent-color);
-      transform: translateX(5px);
-    }
-    
-    .footer-social {
-      display: flex;
-      gap: 15px;
-    }
-    
-    .footer-social a {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      transition: all 0.3s ease;
-    }
-    
-    .footer-social a:hover {
-      background-color: var(--accent-color);
-      transform: translateY(-3px);
-    }
-    
-    .copyright {
-      text-align: center;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 0.9rem;
-    }
-    
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-    
-    .animate {
-      opacity: 0;
-      animation: fadeInUp 0.8s ease forwards;
-    }
-    
-    .delay-1 {
-      animation-delay: 0.2s;
-    }
-    
-    .delay-2 {
-      animation-delay: 0.4s;
-    }
-    
-    .delay-3 {
-      animation-delay: 0.6s;
-    }
-    
-    /* Smooth scroll behavior */
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 992px) {
-      .hero-content, .about-content {
-        flex-direction: column;
-      }
-      
-      .hero-text, .about-text {
-        text-align: center;
-      }
-      
-      .hero-buttons {
-        justify-content: center;
-      }
-      
-      .section-title {
-        font-size: 2rem;
-      }
-      
-      .hero-title {
-        font-size: 2.8rem;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .nav-links {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 80px);
-        background-color: white;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        transition: left 0.3s ease;
-      }
-      
-      .nav-links.active {
-        left: 0;
-      }
-      
-      .hamburger {
-        display: block;
-      }
-      
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .hero-title {
-        font-size: 2.2rem;
-      }
-      
-      section {
-        padding: 60px 0;
-      }
-      
-      .position-rotator {
-        height: 2rem;
-      }
-      
-      .position {
-        font-size: 1.2rem;
-        height: 2rem;
-      }
-      
-      @keyframes rotatePositions {
-        0%, 20% {
-          transform: translateY(0);
-        }
-        25%, 45% {
-          transform: translateY(-2rem);
-        }
-        50%, 70% {
-          transform: translateY(-4rem);
-        }
-        75%, 95% {
-          transform: translateY(-6rem);
-        }
-        100% {
-          transform: translateY(-8rem);
-        }
-      }
-    }
-    
-    @media (max-width: 576px) {
-      .hero-buttons {
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
-      
-      .section-title {
-        font-size: 1.8rem;
-      }
-      
-      .hero-title {
-        font-size: 2rem;
-      }
-      
-      .portfolio-filter {
-        flex-wrap: wrap;
-      }
-    }
-  </style>
+:root {
+  --primary: #0f2b3d;
+  --primary-dark: #082032;
+  --accent: #2c7da0;
+  --accent-light: #61a5c2;
+  --gray-bg: #f8fafc;
+  --text-dark: #1e293b;
+  --text-muted: #475569;
+  --white: #ffffff;
+  --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
+  --shadow-md: 0 20px 25px -5px rgba(0,0,0,0.08);
+  --transition: all 0.3s ease;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: var(--accent);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 40px;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 2px 8px rgba(44, 125, 160, 0.2);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+header.scrolled {
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+  padding-top: 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 20%, rgba(44,125,160,0.03) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.position-rotator {
+  height: 3rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.position-rotator-inner {
+  display: flex;
+  flex-direction: column;
+  animation: rotatePos 10s ease infinite;
+}
+
+.position {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--accent);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes rotatePos {
+  0%, 20% { transform: translateY(0); }
+  25%, 45% { transform: translateY(-3rem); }
+  50%, 70% { transform: translateY(-6rem); }
+  75%, 95% { transform: translateY(-9rem); }
+  100% { transform: translateY(-12rem); }
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 550px;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 32px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s;
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
+}
+
+/* About Section */
+.about {
+  background: var(--gray-bg);
+}
+
+.about-grid {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.about-text p {
+  margin-bottom: 1.2rem;
+  color: var(--text-muted);
+}
+
+.skills h4 {
+  margin: 1rem 0 0.8rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-tag {
+  background: var(--accent);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid #eef2f6;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Portfolio */
+.portfolio {
+  background: var(--gray-bg);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.portfolio-img {
+  height: 260px;
+  overflow: hidden;
+}
+
+.portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.portfolio-item:hover .portfolio-img img {
+  transform: scale(1.08);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(15,43,61,0.95), transparent);
+  padding: 1.5rem;
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
+.portfolio-overlay h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonials */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e9edf2;
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: var(--accent);
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: var(--gray-bg);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-item input {
+  display: none;
+}
+
+.faq-item label {
+  display: block;
+  padding: 16px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--gray-bg);
+  color: var(--primary);
+  transition: var(--transition);
+  position: relative;
+  padding-right: 45px;
+}
+
+.faq-item label::after {
+  content: '\f067';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.faq-item input:checked + label::after {
+  content: '\f068';
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 20px;
+}
+
+.faq-content p {
+  padding: 16px 0;
+  color: var(--text-dark);
+}
+
+.faq-item input:checked ~ .faq-content {
+  max-height: 200px;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+}
+
+.contact-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--text-muted);
+}
+
+.contact-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 3rem 0 1rem;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-col h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.footer-col h3 span {
+  color: var(--accent-light);
+}
+
+.footer-col p {
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  background: rgba(255,255,255,0.1);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+  color: white;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  background: var(--accent);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #a0aec0;
+}
+
+/* Animations */
+.animate {
+  opacity: 0;
+  animation: fadeUp 0.7s forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-content, .about-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: 0.3s;
+    box-shadow: var(--shadow-md);
+  }
+  .nav-links.active {
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+  .footer-col h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+  }
+  .btn {
+    text-align: center;
+  }
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Ivy Krystel Napoco",
   "jobTitle": "E-Commerce Virtual Assistant",
-  "description": "Shopify, Amazon, eBay Virtual Assistant specializing in product listing, data entry, and e-commerce management.",
-  "knowsAbout": ["Shopify", "Amazon Seller Central", "eBay Listing", "Data Entry", "Product Uploading"]
+  "description": "Shopify, Amazon, eBay Virtual Assistant specializing in product listing, data entry, and e-commerce management."
 }
 </script>
-
 </head>
-
 <body>
 
 <!-- HEADER -->
-<header id="header">
-<div class="container">
-<nav>
-<a href="index.html" class="logo">Ivy<span>Napoco</span></a>
-
-<ul class="nav-links">
-<li><a href="index.html" class="active">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="works.html">Portfolio</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-
-<div class="hamburger">
-<i class="fas fa-bars"></i>
-</div>
-</nav>
-</div>
+<header id="main-header">
+  <div class="header-container">
+    <a href="index.html" class="logo">Ivy<span>Napoco</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="works.html" class="nav-link">Portfolio</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-bg"></div>
-
-<div class="container">
-<div class="hero-content animate">
-
-<div class="hero-text">
-
-<h1 class="hero-title">Ivy Krystel Napoco</h1>
-
-<div class="position-rotator">
-<div class="position-rotator-inner">
-<div class="position">E-Commerce Virtual Assistant</div>
-<div class="position">Shopify Product Lister</div>
-<div class="position">Amazon & eBay Specialist</div>
-<div class="position">Data Entry & Admin Support</div>
-</div>
-</div>
-
-<p class="hero-subtitle">
-Professional E-Commerce Virtual Assistant helping online businesses manage Shopify, Amazon, and eBay stores through product listing, data entry, and store optimization.
-</p>
-
-<div class="hero-buttons">
-<a href="works.html" class="btn">View My Work</a>
-<a href="https://drive.google.com/file/d/1kEkLN0b3f-uKO_qYp6w5E3IW9iG-aZKa/view?usp=sharing" class="btn btn-outline">Download Resume</a>
-</div>
-
-</div>
-
-<div class="hero-image delay-1">
-<img src="image.jpg" alt="E-Commerce Virtual Assistant Ivy Napoco">
-</div>
-
-</div>
-</div>
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content animate">
+      <div class="hero-text">
+        <h1 class="hero-title">Ivy Krystel Napoco</h1>
+        <div class="position-rotator">
+          <div class="position-rotator-inner">
+            <div class="position">E-Commerce Virtual Assistant</div>
+            <div class="position">Shopify Product Lister</div>
+            <div class="position">Amazon & eBay Specialist</div>
+            <div class="position">Data Entry & Admin Support</div>
+          </div>
+        </div>
+        <p class="hero-subtitle">Professional E-Commerce Virtual Assistant helping online businesses manage Shopify, Amazon, and eBay stores through product listing, data entry, and store optimization.</p>
+        <div class="hero-buttons">
+          <a href="works.html" class="btn btn-primary">View My Work</a>
+          <a href="#" class="btn btn-outline">Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-image delay-1">
+        <img src="https://placehold.co/600x700/0f2b3d/ffffff?text=Ivy+Napoco" alt="Ivy Napoco">
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about">
-<div class="container">
-
-<h2 class="section-title">About Me</h2>
-
-<div class="about-content">
-
-<div class="about-image">
-<img src="about.jpg" alt="About E-Commerce VA">
-</div>
-
-<div class="about-text">
-
-<h3>E-Commerce Virtual Assistant Specialist</h3>
-
-<p>
-I am a dedicated E-Commerce Virtual Assistant with expertise in Shopify, Amazon, and eBay store management. I help businesses maintain accurate product listings, optimized descriptions, and organized inventory systems.
-</p>
-
-<p>
-My focus is to support online sellers by handling repetitive and time-consuming tasks such as product uploads, order updates, and store maintenance so they can focus on growing their business.
-</p>
-
-<h4>Core Skills</h4>
-
-<div class="skill-tags">
-<span class="skill-tag">Shopify VA</span>
-<span class="skill-tag">Amazon Listing</span>
-<span class="skill-tag">eBay Store Management</span>
-<span class="skill-tag">Data Entry</span>
-<span class="skill-tag">Product Upload</span>
-<span class="skill-tag">SEO Product Listing</span>
-</div>
-
-</div>
-
-</div>
-</div>
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="https://placehold.co/500x600/2c7da0/ffffff?text=About+Me" alt="About Ivy">
+      </div>
+      <div class="about-text">
+        <h3>E-Commerce Virtual Assistant Specialist</h3>
+        <p>I am a dedicated E-Commerce Virtual Assistant with expertise in Shopify, Amazon, and eBay store management. I help businesses maintain accurate product listings, optimized descriptions, and organized inventory systems.</p>
+        <p>My focus is to support online sellers by handling repetitive and time-consuming tasks such as product uploads, order updates, and store maintenance so they can focus on growing their business.</p>
+        <div class="skills">
+          <h4>Core Skills</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Shopify VA</span>
+            <span class="skill-tag">Amazon Listing</span>
+            <span class="skill-tag">eBay Store Management</span>
+            <span class="skill-tag">Data Entry</span>
+            <span class="skill-tag">Product Upload</span>
+            <span class="skill-tag">SEO Product Listing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
 <section class="services">
-<div class="container">
-
-<h2 class="section-title">My E-Commerce Services</h2>
-
-<div class="services-grid">
-
-<div class="service-card">
-<i class="fas fa-shopping-cart service-icon"></i>
-<h3>Shopify Product Listing</h3>
-<p>SEO optimized product titles, descriptions, images, variants, and pricing setup for Shopify stores.</p>
-</div>
-
-<div class="service-card">
-<i class="fas fa-store service-icon"></i>
-<h3>Amazon Store Support</h3>
-<p>Product listing creation, keyword optimization, and inventory management for Amazon sellers.</p>
-</div>
-
-<div class="service-card">
-<i class="fas fa-tags service-icon"></i>
-<h3>eBay Listing Management</h3>
-<p>Creating and optimizing eBay listings to improve visibility and sales performance.</p>
-</div>
-
-<div class="service-card">
-<i class="fas fa-keyboard service-icon"></i>
-<h3>Data Entry Services</h3>
-<p>Fast and accurate data entry, spreadsheet organization, and product catalog updates.</p>
-</div>
-
-</div>
-
-</div>
+  <div class="container">
+    <h2 class="section-title">My E-Commerce Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-shopping-cart service-icon"></i>
+        <h3>Shopify Product Listing</h3>
+        <p>SEO optimized product titles, descriptions, images, variants, and pricing setup for Shopify stores.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-store service-icon"></i>
+        <h3>Amazon Store Support</h3>
+        <p>Product listing creation, keyword optimization, and inventory management for Amazon sellers.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tags service-icon"></i>
+        <h3>eBay Listing Management</h3>
+        <p>Creating and optimizing eBay listings to improve visibility and sales performance.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-keyboard service-icon"></i>
+        <h3>Data Entry Services</h3>
+        <p>Fast and accurate data entry, spreadsheet organization, and product catalog updates.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- CASE STUDIES -->
+<!-- PORTFOLIO -->
 <section class="portfolio">
-<div class="container">
-
-<h2 class="section-title">Case Studies</h2>
-
-<div class="portfolio-grid">
-
-<div class="portfolio-item">
-<div class="portfolio-img">
-<img src="web.png" alt="Shopify Optimization">
-</div>
-<div class="portfolio-overlay">
-<h3>Shopify Store Optimization</h3>
-<p>Improved product listings and SEO structure for better conversions.</p>
-</div>
-</div>
-
-<div class="portfolio-item">
-<div class="portfolio-img">
-<img src="Products.png" alt="Product Upload">
-</div>
-<div class="portfolio-overlay">
-<h3>Bulk Product Upload</h3>
-<p>Managed 200+ product uploads with optimized descriptions.</p>
-</div>
-</div>
-
-<div class="portfolio-item">
-<div class="portfolio-img">
-<img src="shopify.jpg" alt="E-commerce Support">
-</div>
-<div class="portfolio-overlay">
-<h3>Store Management</h3>
-<p>Handled daily store updates and inventory tracking.</p>
-</div>
-</div>
-
-</div>
-
-</div>
+  <div class="container">
+    <h2 class="section-title">Case Studies</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="portfolio-img">
+          <img src="https://placehold.co/600x400/2c7da0/ffffff?text=Shopify+Optimization" alt="Shopify">
+        </div>
+        <div class="portfolio-overlay">
+          <h3>Shopify Store Optimization</h3>
+          <p>Improved product listings and SEO structure for better conversions.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-img">
+          <img src="https://placehold.co/600x400/0f2b3d/ffffff?text=Bulk+Upload" alt="Bulk Upload">
+        </div>
+        <div class="portfolio-overlay">
+          <h3>Bulk Product Upload</h3>
+          <p>Managed 200+ product uploads with optimized descriptions.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-img">
+          <img src="https://placehold.co/600x400/1a365d/ffffff?text=Store+Management" alt="Management">
+        </div>
+        <div class="portfolio-overlay">
+          <h3>Store Management</h3>
+          <p>Handled daily store updates and inventory tracking.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="about">
-<div class="container">
-
-<h2 class="section-title">Client Testimonials</h2>
-
-<div class="services-grid">
-
-<div class="service-card">
-<p>"Very reliable VA. Helped us manage Shopify listings efficiently."</p>
-<h4>- E-commerce Seller</h4>
-</div>
-
-<div class="service-card">
-<p>"Fast and accurate data entry support. Highly recommended."</p>
-<h4>- Online Store Owner</h4>
-</div>
-
-<div class="service-card">
-<p>"Great help with Amazon product uploads and SEO optimization."</p>
-<h4>- Amazon Seller</h4>
-</div>
-
-</div>
-
-</div>
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">Client Testimonials</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <i class="fas fa-quote-left quote-icon"></i>
+        <p>"Very reliable VA. Helped us manage Shopify listings efficiently."</p>
+        <h4>- E-commerce Seller</h4>
+      </div>
+      <div class="testimonial-card">
+        <i class="fas fa-quote-left quote-icon"></i>
+        <p>"Fast and accurate data entry support. Highly recommended."</p>
+        <h4>- Online Store Owner</h4>
+      </div>
+      <div class="testimonial-card">
+        <i class="fas fa-quote-left quote-icon"></i>
+        <p>"Great help with Amazon product uploads and SEO optimization."</p>
+        <h4>- Amazon Seller</h4>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FAQ -->
-<section class="services">
-<div class="container">
-
-<h2 class="section-title">Frequently Asked Questions</h2>
-
-<div class="services-grid">
-
-<div class="service-card">
-<h3>What is an E-Commerce Virtual Assistant?</h3>
-<p>A VA who helps manage online stores like Shopify, Amazon, and eBay including product listings and admin tasks.</p>
-</div>
-
-<div class="service-card">
-<h3>What tools do you use?</h3>
-<p>Shopify, Amazon Seller Central, eBay, Google Sheets, and basic SEO tools.</p>
-</div>
-
-<div class="service-card">
-<h3>Can you handle bulk product uploads?</h3>
-<p>Yes, I can manage large product catalogs efficiently and accurately.</p>
-</div>
-
-</div>
-
-</div>
+<section class="faq-section">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <input type="checkbox" id="faq1">
+        <label for="faq1">What is an E-Commerce Virtual Assistant?</label>
+        <div class="faq-content">
+          <p>A VA who helps manage online stores like Shopify, Amazon, and eBay including product listings and admin tasks.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq2">
+        <label for="faq2">What tools do you use?</label>
+        <div class="faq-content">
+          <p>Shopify, Amazon Seller Central, eBay, Google Sheets, and basic SEO tools.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq3">
+        <label for="faq3">Can you handle bulk product uploads?</label>
+        <div class="faq-content">
+          <p>Yes, I can manage large product catalogs efficiently and accurately.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-
 <!-- CONTACT -->
-<section class="contact">
-<div class="container">
-<h2 class="section-title">Hire Me as Your Virtual Assistant</h2>
-
-<p style="text-align:center;">
-Looking for a reliable E-Commerce Virtual Assistant for Shopify, Amazon, or eBay?
-</p>
-
-</div>
+<section class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Hire Me as Your Virtual Assistant</h2>
+    <p class="contact-intro">Looking for a reliable E-Commerce Virtual Assistant for Shopify, Amazon, or eBay?</p>
+    <div class="contact-center">
+      <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-<div class="container">
-<p>&copy; 2026 Ivy Krystel Napoco | E-Commerce Virtual Assistant</p>
-</div>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>Ivy<span>Napoco</span></h3>
+      <p>E-Commerce Virtual Assistant specializing in Shopify, Amazon, eBay management, and data entry.</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="works.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Work With Me</h3>
+      <p>Ready to start your project? Let's discuss how I can help you achieve your goals.</p>
+      <a href="contact.html" class="btn-primary" style="display: inline-block; padding: 0.5rem 1.2rem; font-size: 0.85rem;">Get In Touch</a>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2026 Ivy Krystel Napoco | E-Commerce Virtual Assistant. All rights reserved.</p>
+  </div>
 </footer>
 
+<script>
+// Sticky header on scroll
+window.addEventListener('scroll', function() {
+  const header = document.getElementById('main-header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if (hamburger) {
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+  });
+}
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
+// Active nav link based on current page
+const currentPage = window.location.pathname.split("/").pop();
+document.querySelectorAll('.nav-link').forEach(link => {
+  const linkPage = link.getAttribute('href');
+  if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  }
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
 </body>
 </html>
