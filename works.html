@@ -3,374 +3,887 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<title>Portfolio | E-Commerce Virtual Assistant Shopify | Amazon | eBay | Web Designer - Ivy Krystel Napoco</title>
-
+<title>Portfolio | E-Commerce Virtual Assistant | Shopify | Amazon | eBay | Web Designer - Ivy Krystel Napoco</title>
 <meta name="description" content="Portfolio of Ivy Krystel Napoco, an E-Commerce Virtual Assistant specializing in Shopify store development, product listing, Amazon & eBay management, web design, branding, and system development." />
-
-<meta name="keywords" content="E-Commerce Virtual Assistant, Shopify Expert, Shopify Product Listing, Amazon VA, eBay Listing Specialist, Web Designer Philippines, Data Entry Specialist, Virtual Assistant Portfolio, Shopify Store Setup, Website Development, Graphic Design, System Developer" />
-
+<meta name="keywords" content="E-Commerce Virtual Assistant, Shopify Expert, Amazon VA, eBay Listing Specialist, Web Designer Philippines, Data Entry Specialist" />
 <meta name="author" content="Ivy Krystel Napoco" />
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-<!-- Open Graph -->
 <meta property="og:title" content="E-Commerce Virtual Assistant Portfolio - Ivy Krystel Napoco" />
 <meta property="og:description" content="Shopify Expert, Amazon & eBay Product Listing Specialist, Web Designer, and Virtual Assistant." />
-<meta property="og:type" content="website" />
-
 <style>
 :root {
-  --primary:#2a4365;
-  --accent:#4299e1;
-  --light:#f7fafc;
-  --text:#4a5568;
-  --muted:#718096;
-  --shadow:0 4px 6px rgba(0,0,0,.1);
-  --heading:'Playfair Display',serif;
-  --body:'Poppins',sans-serif;
+  --primary: #0f2b3d;
+  --primary-dark: #082032;
+  --accent: #2c7da0;
+  --accent-light: #61a5c2;
+  --gray-bg: #f8fafc;
+  --text-dark: #1e293b;
+  --text-muted: #475569;
+  --white: #ffffff;
+  --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
+  --shadow-md: 0 20px 25px -5px rgba(0,0,0,0.08);
+  --transition: all 0.3s ease;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:var(--body);color:var(--text);padding-top:80px;}
-a{text-decoration:none;color:inherit}
-img{width:100%;display:block}
-
-header{
-  position:fixed;top:0;width:100%;
-  background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);
-  z-index:999;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav{
-  max-width:1200px;margin:auto;
-  display:flex;justify-content:space-between;
-  padding:15px 20px;
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
-.logo{font-family:var(--heading);font-size:2rem;color:var(--primary);}
-.logo span{color:var(--accent)}
-
-.nav-links{list-style:none;display:flex;gap:30px;}
-
-.nav-links a.active{color:var(--accent)}
-
-main{max-width:1200px;margin:auto;padding:40px 20px;}
-
-h1{
-  font-family:var(--heading);
-  text-align:center;
-  font-size:3rem;
-  color:var(--primary);
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-h1::after{
-  content:'';display:block;
-  width:90px;height:4px;
-  background:var(--accent);
-  margin:15px auto;
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: var(--transition);
 }
 
-p{text-align:center;margin-top:10px}
-
-/* FILTER SECTION */
-.filters{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin:30px 0;
-  flex-wrap:wrap;
+header.scrolled {
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.filter-btn{
-  padding:8px 15px;
-  border:1px solid var(--accent);
-  border-radius:20px;
-  font-size:.85rem;
-  cursor:pointer;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-/* GRID */
-.portfolio-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:2rem;
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
 }
 
-/* CARD */
-.portfolio-item{
-  background:var(--light);
-  border-radius:10px;
-  box-shadow:var(--shadow);
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
+.logo span {
+  color: var(--accent);
 }
 
-.portfolio-item-content{
-  padding:1.5rem;
-  display:flex;
-  flex-direction:column;
-  flex-grow:1;
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
 }
 
-.portfolio-item h3{
-  font-family:var(--heading);
-  color:var(--primary);
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: var(--transition);
 }
 
-.portfolio-item p{
-  font-size:.92rem;
-  color:var(--muted);
-  text-align:left;
+.nav-link:hover, .nav-link.active {
+  color: var(--accent);
 }
 
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
-.tag{
-  background:rgba(66,153,225,.1);
-  color:var(--accent);
-  padding:4px 12px;
-  border-radius:20px;
-  font-size:.75rem;
+.hamburger {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--primary);
 }
 
-.btn{
-  margin-top:auto;
-  padding:10px;
-  background:var(--accent);
-  color:#fff;
-  border-radius:6px;
-  text-align:center;
+/* Main Content */
+main {
+  max-width: 1280px;
+  margin: 120px auto 3rem;
+  padding: 0 2rem;
+  animation: fadeIn 0.6s ease-out;
 }
 
-/* SECTION BLOCKS */
-.section{
-  margin-top:70px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.section h2{
-  font-family:var(--heading);
-  color:var(--primary);
-  text-align:center;
-  margin-bottom:20px;
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
 }
 
-/* TESTIMONIALS */
-.testimonial{
-  background:#fff;
-  box-shadow:var(--shadow);
-  padding:20px;
-  border-radius:10px;
+h1::after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: var(--accent);
+  margin: 15px auto 0;
+  border-radius: 2px;
 }
 
-/* FAQ */
-.faq{
-  margin-top:20px;
+.portfolio-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: var(--text-muted);
 }
 
-.faq-item{
-  margin-bottom:15px;
+/* Filter Buttons */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 40px 0;
+  flex-wrap: wrap;
 }
 
-.faq-item h4{
-  color:var(--primary);
-}
-/* FAQ DROPDOWN */
-.faq-item{
-  margin-bottom:15px;
-  border:1px solid #e2e8f0;
-  border-radius:8px;
-  overflow:hidden;
-  background:#fff;
-}
-
-.faq-item input{
-  display:none;
+.filter-btn {
+  padding: 10px 24px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--accent);
 }
 
-.faq-item label{
-  display:block;
-  padding:15px;
-  font-weight:600;
-  cursor:pointer;
-  background:#f7fafc;
-  color:#2a4365;
-  transition:0.3s;
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 125, 160, 0.3);
 }
 
-.faq-item label:hover{
-  background:#edf2f7;
+/* Portfolio Grid - 3 cards per row */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-.faq-content{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height 0.3s ease;
-  padding:0 15px;
+/* Portfolio Card */
+.portfolio-item {
+  background: var(--gray-bg);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid #eef2f6;
 }
 
-.faq-content p{
-  padding:15px 0;
-  color:#4a5568;
-  font-size:0.9rem;
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
 }
 
-/* OPEN STATE */
-.faq-item input:checked ~ .faq-content{
-  max-height:200px;
+.portfolio-image {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 43, 61, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.portfolio-item-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.portfolio-item h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.portfolio-item p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: rgba(44, 125, 160, 0.1);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: white;
+  border-radius: 40px;
+  text-align: center;
+  font-weight: 500;
+  transition: var(--transition);
+  margin-top: auto;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--primary);
+  transform: translateX(5px);
+}
+
+.btn i {
+  font-size: 0.85rem;
+}
+
+/* Sections */
+.section {
+  margin-top: 70px;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 12px auto 0;
+}
+
+/* Skills Cloud */
+.skills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.skills-cloud span {
+  background: var(--gray-bg);
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-weight: 500;
+  color: var(--primary);
+  transition: var(--transition);
+  cursor: default;
+  border: 1px solid #eef2f6;
+}
+
+.skills-cloud span:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* FAQ Section */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-item input {
+  display: none;
+}
+
+.faq-item label {
+  display: block;
+  padding: 16px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--gray-bg);
+  color: var(--primary);
+  transition: var(--transition);
+  position: relative;
+  padding-right: 45px;
+}
+
+.faq-item label::after {
+  content: '\f067';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.faq-item input:checked + label::after {
+  content: '\f068';
+}
+
+.faq-item label:hover {
+  background: #edf2f7;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 20px;
+}
+
+.faq-content p {
+  padding: 16px 0;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq-item input:checked ~ .faq-content {
+  max-height: 200px;
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 3rem 0 1rem;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-col h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.footer-col h3 span {
+  color: var(--accent-light);
+}
+
+.footer-col p {
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  background: rgba(255,255,255,0.1);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+  color: white;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  background: var(--accent);
+  transform: translateY(-3px);
+}
+
+.btn-small {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-small:hover {
+  background: white;
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #a0aec0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: 0.3s;
+    box-shadow: var(--shadow-md);
+  }
+  .nav-links.active {
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+  .footer-col h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .filter-btn {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+  }
+  .section h2 {
+    font-size: 1.6rem;
+  }
 }
 </style>
-
-<!-- SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Ivy Krystel Napoco",
   "jobTitle": "E-Commerce Virtual Assistant",
-  "description": "Shopify, Amazon, eBay Virtual Assistant, Web Designer, System Developer",
-  "url": "",
-  "sameAs": [
-    "https://facebook.com",
-    "https://linkedin.com"
-  ]
+  "description": "Shopify, Amazon, eBay Virtual Assistant, Web Designer, System Developer"
 }
 </script>
-
 </head>
-
 <body>
 
-<header>
-<nav>
-  <div class="logo">Ivy <span>Napoco</span></div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="works.html" class="active">Works</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+<!-- HEADER -->
+<header id="main-header">
+  <div class="header-container">
+    <a href="index.html" class="logo">Ivy<span>Napoco</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="works.html" class="nav-link active">Portfolio</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
 </header>
 
 <main>
+  <h1>My Professional Portfolio</h1>
+  <p class="portfolio-intro">
+    E-Commerce Virtual Assistant specializing in Shopify Store Development, Product Listing, Amazon & eBay Management, 
+    Web Design, Branding, and System Development.
+  </p>
 
-<h1>My Professional Portfolio</h1>
-
-<p>
-E-Commerce Virtual Assistant specializing in Shopify Store Development, Product Listing, Amazon & eBay Management, Web Design, Branding, and System Development.
-</p>
-
-<!-- FILTER -->
-<div class="filters">
-  <div class="filter-btn">All</div>
-  <div class="filter-btn">Shopify</div>
-  <div class="filter-btn">Web Design</div>
-  <div class="filter-btn">Branding</div>
-  <div class="filter-btn">Systems</div>
-</div>
-
-<!-- PORTFOLIO GRID -->
-<div class="portfolio-grid">
-
-<!-- 1 -->
-<div class="portfolio-item">
-<img src="shopify.jpg" />
-<div class="portfolio-item-content">
-<h3>Shopify Store Development</h3>
-<p>Full Shopify setup including product listing, SEO optimization, theme customization, and conversion-focused design for e-commerce businesses.</p>
-<div class="tags">
-<span class="tag">Shopify</span><span class="tag">E-commerce</span><span class="tag">SEO Listing</span>
-</div>
-<a class="btn" href="shopify-samples.html">View Project</a>
-</div>
-</div>
-
-<!-- 2 -->
-<div class="portfolio-item">
-<img src="web.png" />
-<div class="portfolio-item-content">
-<h3>Responsive Website Development</h3>
-<p>Modern website design with UI/UX optimization, fast loading performance, and mobile responsiveness for business growth.</p>
-<div class="tags">
-<span class="tag">Web Design</span><span class="tag">UI/UX</span><span class="tag">Responsive</span>
-</div>
-<a class="btn" href="Sites_sample.html">View Site</a>
-</div>
-</div>
-
-<!-- 3 -->
-<div class="portfolio-item">
-<img src="logocafe.png" />
-<div class="portfolio-item-content">
-<h3>Brand Identity & Logo Design</h3>
-<p>Creative branding solutions including logo creation, visual identity, and business brand consistency design.</p>
-<div class="tags">
-<span class="tag">Branding</span><span class="tag">Logo</span><span class="tag">Identity</span>
-</div>
-</div>
-</div>
-
-<!-- 4 -->
-<div class="portfolio-item">
-<img src="system.png" />
-<div class="portfolio-item-content">
-<h3>System Development</h3>
-<p>Custom web systems designed for automation, business workflow improvement, and data management efficiency.</p>
-<div class="tags">
-<span class="tag">System</span><span class="tag">Automation</span>
-</div>
-<a class="btn" href="#">View System</a>
-</div>
-</div>
-
-</div>
-
-<!-- SKILLS -->
-<div class="section">
-<h2>Core Skills</h2>
-<p>Shopify Management | Amazon Listing | eBay Store Management | Data Entry | Web Design | SEO Optimization | System Development</p>
-</div>
-
-
-
-<!-- FAQ -->
-<div class="section faq">
-<h2>Frequently Asked Questions</h2>
-
-<div class="faq-item">
-  <input type="checkbox" id="faq1">
-  <label for="faq1">What services do you offer?</label>
-  <div class="faq-content">
-    <p>I offer Shopify store management, product listing, Amazon & eBay support, web design, and system development.</p>
+  <!-- FILTER BUTTONS -->
+  <div class="filters" id="portfolioFilters">
+    <button class="filter-btn active" data-filter="all">All Projects</button>
+    <button class="filter-btn" data-filter="shopify">Shopify</button>
+    <button class="filter-btn" data-filter="webdesign">Web Design</button>
+    <button class="filter-btn" data-filter="branding">Branding</button>
+    <button class="filter-btn" data-filter="systems">Systems</button>
   </div>
-</div>
 
-<div class="faq-item">
-  <input type="checkbox" id="faq2">
-  <label for="faq2">Do you handle product uploads?</label>
-  <div class="faq-content">
-    <p>Yes, I handle full product listing including images, pricing, descriptions, and SEO optimization.</p>
+  <!-- PORTFOLIO GRID -->
+  <div class="portfolio-grid" id="portfolioGrid">
+    
+    <!-- Project 1 - Shopify -->
+    <div class="portfolio-item" data-category="shopify">
+      <div class="portfolio-image">
+        <img src="Shine_Bauty_&_Co..png" alt="Shopify Store Development">
+      </div>
+      <div class="portfolio-item-content">
+        <h3>Shopify Store Development</h3>
+        <p>Full Shopify setup including product listing, SEO optimization, theme customization, and conversion-focused design for e-commerce businesses.</p>
+        <div class="tags">
+          <span class="tag">Shopify</span>
+          <span class="tag">E-commerce</span>
+          <span class="tag">SEO Listing</span>
+        </div>
+        <a href="shopify-samples.html" class="btn">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Project 2 - Web Design -->
+    <div class="portfolio-item" data-category="webdesign">
+      <div class="portfolio-image">
+        <img src="web.png" alt="Responsive Website Development">
+      </div>
+      <div class="portfolio-item-content">
+        <h3>Responsive Website Development</h3>
+        <p>Modern website design with UI/UX optimization, fast loading performance, and mobile responsiveness for business growth.</p>
+        <div class="tags">
+          <span class="tag">Web Design</span>
+          <span class="tag">UI/UX</span>
+          <span class="tag">Responsive</span>
+        </div>
+        <a href="#" class="btn">View Site <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Project 3 - Branding -->
+    <div class="portfolio-item" data-category="branding">
+      <div class="portfolio-image">
+        <img src="logocafe.png" alt="Brand Identity & Logo Design">
+      </div>
+      <div class="portfolio-item-content">
+        <h3>Brand Identity & Logo Design</h3>
+        <p>Creative branding solutions including logo creation, visual identity, and business brand consistency design.</p>
+        <div class="tags">
+          <span class="tag">Branding</span>
+          <span class="tag">Logo</span>
+          <span class="tag">Identity</span>
+        </div>
+        <a href="#" class="btn">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Project 4 - Systems -->
+    <div class="portfolio-item" data-category="systems">
+      <div class="portfolio-image">
+        <img src="https://placehold.co/600x400/082032/ffffff?text=System+Development" alt="System Development">
+      </div>
+      <div class="portfolio-item-content">
+        <h3>System Development</h3>
+        <p>Custom web systems designed for automation, business workflow improvement, and data management efficiency.</p>
+        <div class="tags">
+          <span class="tag">System</span>
+          <span class="tag">Automation</span>
+        </div>
+        <a href="#" class="btn">View System <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Project 5 - Amazon/eBay -->
+    <div class="portfolio-item" data-category="shopify">
+      <div class="portfolio-image">
+        <img src="amazon.avif" alt="Amazon Product Listing">
+      </div>
+      <div class="portfolio-item-content">
+        <h3>Amazon & eBay Product Management</h3>
+        <p>End-to-end product listing optimization, inventory management, and store maintenance for major e-commerce platforms.</p>
+        <div class="tags">
+          <span class="tag">Amazon</span>
+          <span class="tag">eBay</span>
+          <span class="tag">Product Listing</span>
+        </div>
+        <a href="https://www.ebay.com/itm/206127101664?epid=1812116103&itmmeta=01KSH0PRJ03015C9WA09VG6CJP&hash=item2ffe21f6e0:g:ogkAAeSwAFRpsQf4" class="btn">View Case Study <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Project 6 - Additional Web Design -->
+    <div class="portfolio-item" data-category="webdesign">
+      <div class="portfolio-image">
+        <img src="foxtail.png" alt="E-commerce Website">
+      </div>
+      <div class="portfolio-item-content">
+        <h3>Custom E-commerce Website</h3>
+        <p>Bespoke e-commerce solution with integrated payment gateway, product catalog, and customer management system.</p>
+        <div class="tags">
+          <span class="tag">E-commerce</span>
+          <span class="tag">Payment Integration</span>
+          <span class="tag">Custom CMS</span>
+        </div>
+        <a href="#" class="btn">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="faq-item">
-  <input type="checkbox" id="faq3">
-  <label for="faq3">Can you manage e-commerce stores long-term?</label>
-  <div class="faq-content">
-    <p>Yes, I provide long-term virtual assistant support for online stores.</p>
+  <!-- CORE SKILLS SECTION -->
+  <div class="section">
+    <h2>Core Competencies</h2>
+    <div class="skills-cloud">
+      <span>Shopify Management</span>
+      <span>Amazon Listing</span>
+      <span>eBay Store Management</span>
+      <span>Data Entry</span>
+      <span>Web Design</span>
+      <span>SEO Optimization</span>
+      <span>System Development</span>
+      <span>Brand Identity</span>
+      <span>UI/UX Design</span>
+      <span>Virtual Assistance</span>
+    </div>
   </div>
-</div>
 
-</div>
-
+  <!-- FAQ SECTION -->
+  <div class="section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <input type="checkbox" id="faq1">
+        <label for="faq1">What services do you offer?</label>
+        <div class="faq-content">
+          <p>I offer Shopify store management, product listing, Amazon & eBay support, web design, branding, and system development.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq2">
+        <label for="faq2">Do you handle product uploads?</label>
+        <div class="faq-content">
+          <p>Yes, I handle full product listing including images, pricing, descriptions, SEO optimization, and inventory management.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq3">
+        <label for="faq3">Can you manage e-commerce stores long-term?</label>
+        <div class="faq-content">
+          <p>Yes, I provide long-term virtual assistant support for online stores including daily management and maintenance.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq4">
+        <label for="faq4">What is your turnaround time?</label>
+        <div class="faq-content">
+          <p>Turnaround time depends on project scope. Small tasks within 24-48 hours, larger projects discussed based on requirements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
-<footer style="text-align:center;padding:40px;background:#2a4365;color:#fff;">
-<p>© 2026 Ivy Krystel Napoco | E-Commerce Virtual Assistant 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>Ivy<span>Napoco</span></h3>
+      <p>E-Commerce Virtual Assistant & Web Designer specializing in Shopify, Amazon, eBay management, and creative solutions.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/iknap0c8/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://github.com/ikn13"><i class="fab fa-github"></i></a>
+        <a href="www.linkedin.com/in/ivy-krystel-napoco-927964267"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/yvi_krystel/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="works.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Work With Me</h3>
+      <p>Ready to elevate your online presence? Let's collaborate on your next project!</p>
+      <a href="contact.html" class="btn-small">Hire Me</a>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2026 Ivy Krystel Napoco | E-Commerce Virtual Assistant & Web Designer. All rights reserved.</p>
+  </div>
 </footer>
 
+<script>
+// Sticky header
+window.addEventListener('scroll', function() {
+  const header = document.getElementById('main-header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if (hamburger) {
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+  });
+}
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
+// Active nav link based on current page
+const currentPage = window.location.pathname.split("/").pop();
+document.querySelectorAll('.nav-link').forEach(link => {
+  const linkPage = link.getAttribute('href');
+  if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  }
+});
+
+// Portfolio Filter Functionality
+const filterBtns = document.querySelectorAll('.filter-btn');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filterValue = btn.getAttribute('data-filter');
+    
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    portfolioItems.forEach(item => {
+      if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
