@@ -3,724 +3,120 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>E-Commerce Virtual Assistant | Shopify | Amazon | eBay VA | Ivy Napoco</title>
-<meta name="description" content="Experienced E-Commerce Virtual Assistant specializing in Shopify product listing, Amazon and eBay store management, data entry, and virtual admin support." />
-<meta name="keywords" content="E-commerce Virtual Assistant, Shopify VA, Amazon Product Listing, eBay VA, Data Entry Specialist" />
-<meta property="og:title" content="E-Commerce Virtual Assistant Portfolio - Ivy Napoco" />
-<meta property="og:description" content="Shopify, Amazon & eBay Virtual Assistant specializing in product listing, data entry, and e-commerce store support." />
+<title>Technical Support Specialist | Web Developer | E-Commerce VA | Ivy Napoco</title>
+<meta name="description" content="Technical Support Specialist and Web Developer with e-commerce experience. Ticket-based support, troubleshooting, website building, Shopify and eBay store management, and data entry." />
+<meta name="keywords" content="Technical Support Specialist, Ticket Support, Web Developer, E-commerce Virtual Assistant, Shopify VA, eBay, Data Entry" />
+<meta property="og:title" content="Technical Support Specialist &amp; E-Commerce VA Portfolio - Ivy Napoco" />
+<meta property="og:description" content="Ticket-based technical support, website building, and Shopify and eBay store support." />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
-:root {
-  --primary: #0f2b3d;
-  --primary-dark: #082032;
-  --accent: #2c7da0;
-  --accent-light: #61a5c2;
-  --gray-bg: #f8fafc;
-  --text-dark: #1e293b;
-  --text-muted: #475569;
-  --white: #ffffff;
-  --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
-  --shadow-md: 0 20px 25px -5px rgba(0,0,0,0.08);
-  --transition: all 0.3s ease;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-dark);
-  background-color: var(--white);
-  line-height: 1.5;
-  scroll-behavior: smooth;
-}
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-section {
-  padding: 5rem 0;
-}
-
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: var(--primary);
-  position: relative;
-}
-
-.section-title::after {
-  content: '';
-  display: block;
-  width: 70px;
-  height: 4px;
-  background: var(--accent);
-  margin: 1rem auto 0;
-  border-radius: 2px;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.8rem;
-  border-radius: 40px;
-  font-weight: 500;
-  transition: var(--transition);
-  cursor: pointer;
-  border: none;
-  font-size: 0.95rem;
-  text-decoration: none;
-}
-
-.btn-primary {
-  background: var(--accent);
-  color: white;
-  box-shadow: 0 2px 8px rgba(44, 125, 160, 0.2);
-}
-
-.btn-primary:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.btn-outline {
-  background: transparent;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn-outline:hover {
-  background: var(--accent);
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* Header Styles */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  transition: var(--transition);
-}
-
-header.scrolled {
-  background: rgba(255,255,255,0.98);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--primary);
-  text-decoration: none;
-}
-
-.logo span {
-  color: var(--accent);
-}
-
-.nav-links {
-  display: flex;
-  gap: 2.2rem;
-  list-style: none;
-}
-
-.nav-link {
-  text-decoration: none;
-  font-weight: 500;
-  color: var(--text-dark);
-  transition: var(--transition);
-}
-
-.nav-link:hover, .nav-link.active {
-  color: var(--accent);
-}
-
-.hamburger {
-  display: none;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: var(--primary);
-}
-
-/* Hero Section */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
-  padding-top: 80px;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 10% 20%, rgba(44,125,160,0.03) 0%, transparent 70%);
-  z-index: 0;
-}
-
-.hero-content {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-text {
-  flex: 1;
-}
-
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.position-rotator {
-  height: 3rem;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-
-.position-rotator-inner {
-  display: flex;
-  flex-direction: column;
-  animation: rotatePos 10s ease infinite;
-}
-
-.position {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--accent);
-  height: 3rem;
-  display: flex;
-  align-items: center;
-}
-
-@keyframes rotatePos {
-  0%, 20% { transform: translateY(0); }
-  25%, 45% { transform: translateY(-3rem); }
-  50%, 70% { transform: translateY(-6rem); }
-  75%, 95% { transform: translateY(-9rem); }
-  100% { transform: translateY(-12rem); }
-}
-
-.hero-subtitle {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  max-width: 550px;
-  margin-bottom: 2rem;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.hero-image {
-  flex: 1;
-}
-
-.hero-image img {
-  width: 100%;
-  border-radius: 32px;
-  box-shadow: var(--shadow-md);
-  transition: transform 0.3s;
-}
-
-.hero-image img:hover {
-  transform: scale(1.02);
-}
-
-/* About Section */
-.about {
-  background: var(--gray-bg);
-}
-
-.about-grid {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-}
-
-.about-image {
-  flex: 1;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 28px;
-  box-shadow: var(--shadow-sm);
-}
-
-.about-text {
-  flex: 1;
-}
-
-.about-text h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-}
-
-.about-text p {
-  margin-bottom: 1.2rem;
-  color: var(--text-muted);
-}
-
-.skills h4 {
-  margin: 1rem 0 0.8rem;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.skill-tag {
-  background: var(--accent);
-  color: white;
-  padding: 0.3rem 1rem;
-  border-radius: 30px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-/* Services Grid */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-
-.service-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 24px;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-  border: 1px solid #eef2f6;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-md);
-}
-
-.service-icon {
-  font-size: 2.5rem;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.service-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.75rem;
-}
-
-.service-card p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-/* Portfolio */
-.portfolio {
-  background: var(--gray-bg);
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.portfolio-item {
-  position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.portfolio-img {
-  height: 260px;
-  overflow: hidden;
-}
-
-.portfolio-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s;
-}
-
-.portfolio-item:hover .portfolio-img img {
-  transform: scale(1.08);
-}
-
-.portfolio-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(15,43,61,0.95), transparent);
-  padding: 1.5rem;
-  color: white;
-  transform: translateY(100%);
-  transition: transform 0.3s;
-}
-
-.portfolio-item:hover .portfolio-overlay {
-  transform: translateY(0);
-}
-
-.portfolio-overlay h3 {
-  margin-bottom: 0.5rem;
-}
-
-/* Testimonials */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.testimonial-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 24px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid #e9edf2;
-}
-
-.quote-icon {
-  font-size: 2rem;
-  color: var(--accent);
-  opacity: 0.5;
-  margin-bottom: 1rem;
-}
-
-/* FAQ Section */
-.faq-section {
-  background: var(--gray-bg);
-}
-
-.faq-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  margin-bottom: 16px;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--white);
-  box-shadow: var(--shadow-sm);
-}
-
-.faq-item input {
-  display: none;
-}
-
-.faq-item label {
-  display: block;
-  padding: 16px 20px;
-  font-weight: 600;
-  cursor: pointer;
-  background: var(--gray-bg);
-  color: var(--primary);
-  transition: var(--transition);
-  position: relative;
-  padding-right: 45px;
-}
-
-.faq-item label::after {
-  content: '\f067';
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 900;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.faq-item input:checked + label::after {
-  content: '\f068';
-}
-
-.faq-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  padding: 0 20px;
-}
-
-.faq-content p {
-  padding: 16px 0;
-  color: var(--text-dark);
-}
-
-.faq-item input:checked ~ .faq-content {
-  max-height: 200px;
-}
-
-/* Contact Section */
-.contact-section {
-  text-align: center;
-}
-
-.contact-intro {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  color: var(--text-muted);
-}
-
-.contact-center {
-  display: flex;
-  justify-content: center;
-}
-
-/* Footer */
-footer {
-  background: var(--primary);
-  color: white;
-  padding: 3rem 0 1rem;
-  margin-top: 2rem;
-}
-
-.footer-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 0 2rem;
-  margin-bottom: 2rem;
-}
-
-.footer-col h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: white;
-}
-
-.footer-col h3 span {
-  color: var(--accent-light);
-}
-
-.footer-col p {
-  color: #cbd5e1;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-}
-
-.footer-links {
-  list-style: none;
-}
-
-.footer-links li {
-  margin-bottom: 0.6rem;
-}
-
-.footer-links a {
-  color: #cbd5e1;
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.footer-links a:hover {
-  color: white;
-  padding-left: 5px;
-}
-
-.footer-social {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.footer-social a {
-  background: rgba(255,255,255,0.1);
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: var(--transition);
-  color: white;
-  text-decoration: none;
-}
-
-.footer-social a:hover {
-  background: var(--accent);
-  transform: translateY(-3px);
-}
-
-.copyright {
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 1.5rem;
-  font-size: 0.85rem;
-  color: #a0aec0;
-}
-
-/* Animations */
-.animate {
-  opacity: 0;
-  animation: fadeUp 0.7s forwards;
-}
-
-.delay-1 {
-  animation-delay: 0.2s;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 1100px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .testimonial-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  .hero-content, .about-grid {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-title {
-    font-size: 2.8rem;
-  }
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    background: white;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    gap: 1.5rem;
-    transition: 0.3s;
-    box-shadow: var(--shadow-md);
-  }
-  .nav-links.active {
-    left: 0;
-  }
-  .hamburger {
-    display: block;
-  }
-  .hero-title {
-    font-size: 2.2rem;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .footer-social {
-    justify-content: center;
-  }
-  .footer-col h3::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 576px) {
-  .logo {
-    font-size: 1.5rem;
-  }
-  .hero-title {
-    font-size: 1.8rem;
-  }
-  .section-title {
-    font-size: 1.8rem;
-  }
-  .hero-buttons {
-    flex-direction: column;
-  }
-  .btn {
-    text-align: center;
-  }
-}
+:root{--primary:#0f2b3d;--primary-dark:#082032;--accent:#2c7da0;--accent-light:#61a5c2;--gray-bg:#f8fafc;--text-dark:#1e293b;--text-muted:#475569;--white:#fff;--shadow-sm:0 10px 25px -5px rgba(0,0,0,.05);--shadow-md:0 20px 25px -5px rgba(0,0,0,.08);--transition:all .3s ease}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text-dark);background:var(--white);line-height:1.5}
+.container{max-width:1280px;margin:0 auto;padding:0 2rem}
+section{padding:5rem 0}
+.section-title{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:600;text-align:center;margin-bottom:3rem;color:var(--primary)}
+.section-title::after{content:'';display:block;width:70px;height:4px;background:var(--accent);margin:1rem auto 0;border-radius:2px}
+.btn{display:inline-block;padding:.8rem 1.8rem;border-radius:40px;font-weight:500;transition:var(--transition);cursor:pointer;border:none;font-size:.95rem;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(44,125,160,.2)}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+.btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+.btn-outline:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+a:focus-visible,.btn:focus-visible,.faq-item input:focus-visible+label{outline:3px solid var(--accent-light);outline-offset:2px}
+header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);z-index:1000;box-shadow:0 1px 3px rgba(0,0,0,.05);transition:var(--transition)}
+header.scrolled{background:rgba(255,255,255,.98);box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.header-container{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;max-width:1280px;margin:0 auto}
+.logo{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--primary);text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-link{text-decoration:none;font-weight:500;color:var(--text-dark);transition:var(--transition)}
+.nav-link:hover,.nav-link.active{color:var(--accent)}
+.hamburger{display:none;font-size:1.6rem;cursor:pointer;color:var(--primary)}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(135deg,#f1f5f9 0%,#fff 100%);padding-top:80px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 10% 20%,rgba(44,125,160,.03) 0%,transparent 70%);z-index:0}
+.hero-content{display:flex;align-items:center;gap:3rem;position:relative;z-index:2}
+.hero-text,.hero-image,.about-image,.about-text{flex:1}
+.hero-title{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:700;color:var(--primary);margin-bottom:1rem}
+.position-rotator{height:3rem;overflow:hidden;margin-bottom:1.5rem}
+.position-rotator-inner{display:flex;flex-direction:column;animation:rotatePos 12s ease infinite}
+.position{font-size:1.4rem;font-weight:600;color:var(--accent);height:3rem;display:flex;align-items:center}
+@keyframes rotatePos{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-3rem)}50%,70%{transform:translateY(-6rem)}75%,95%{transform:translateY(-9rem)}100%{transform:translateY(0)}}
+.hero-subtitle{font-size:1.1rem;color:var(--text-muted);max-width:550px;margin-bottom:2rem}
+.hero-buttons{display:flex;gap:1rem}
+.hero-image img{width:100%;border-radius:32px;box-shadow:var(--shadow-md);transition:transform .3s}
+.hero-image img:hover{transform:scale(1.02)}
+.about,.portfolio,.faq-section{background:var(--gray-bg)}
+.about-grid{display:flex;gap:3rem;align-items:center}
+.about-image img{width:100%;border-radius:28px;box-shadow:var(--shadow-sm)}
+.about-text h3{font-size:1.8rem;margin-bottom:1rem;color:var(--primary)}
+.about-text p{margin-bottom:1.2rem;color:var(--text-muted)}
+.skills h4{margin:1rem 0 .8rem}
+.skill-tags{display:flex;flex-wrap:wrap;gap:.6rem}
+.skill-tag{background:var(--accent);color:#fff;padding:.3rem 1rem;border-radius:30px;font-size:.8rem;font-weight:500}
+.group-title{font-size:1.3rem;color:var(--primary);margin:0 0 1rem}
+.group-title.second{margin-top:2.5rem}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.service-card{background:#fff;padding:1.5rem;border-radius:24px;box-shadow:var(--shadow-sm);transition:var(--transition);border:1px solid #eef2f6}
+.service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md)}
+.service-icon{font-size:2.5rem;color:var(--accent);margin-bottom:1rem}
+.service-card h3{font-size:1.3rem;margin-bottom:.75rem}
+.service-card p{font-size:.85rem;color:var(--text-muted)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.portfolio-item{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition);cursor:pointer}
+.portfolio-img{height:260px;overflow:hidden}
+.portfolio-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.portfolio-item:hover .portfolio-img img{transform:scale(1.08)}
+.portfolio-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(15,43,61,.95),transparent);padding:1.5rem;color:#fff;transform:translateY(100%);transition:transform .3s}
+.portfolio-item:hover .portfolio-overlay{transform:translateY(0)}
+.portfolio-overlay h3{margin-bottom:.5rem}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.exp-card{background:#fff;padding:2rem;border-radius:24px;box-shadow:var(--shadow-sm);border:1px solid #e9edf2}
+.exp-card h3{font-size:1.2rem;color:var(--primary)}
+.exp-meta{font-size:.85rem;color:var(--accent);font-weight:600;margin:.25rem 0 1rem}
+.exp-card ul{padding-left:1.1rem;color:var(--text-muted);font-size:.9rem}
+.exp-card li{margin-bottom:.5rem}
+.faq-container{max-width:800px;margin:0 auto}
+.faq-item{margin-bottom:16px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;background:var(--white);box-shadow:var(--shadow-sm)}
+.faq-item input{position:absolute;opacity:0;pointer-events:none}
+.faq-item label{display:block;padding:16px 45px 16px 20px;font-weight:600;cursor:pointer;background:var(--gray-bg);color:var(--primary);transition:var(--transition);position:relative}
+.faq-item label::after{content:'\f067';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;right:20px;top:50%;transform:translateY(-50%)}
+.faq-item input:checked+label::after{content:'\f068'}
+.faq-content{max-height:0;overflow:hidden;transition:max-height .4s ease;padding:0 20px}
+.faq-content p{padding:16px 0}
+.faq-item input:checked~.faq-content{max-height:240px}
+.contact-section{text-align:center}
+.contact-intro{max-width:620px;margin:0 auto 2rem;color:var(--text-muted)}
+.contact-center{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+footer{background:var(--primary);color:#fff;padding:3rem 0 1rem;margin-top:2rem}
+.footer-container{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;padding:0 2rem;margin-bottom:2rem}
+.footer-col h3{font-size:1.3rem;margin-bottom:1rem}
+.footer-col h3 span{color:var(--accent-light)}
+.footer-col p{color:#cbd5e1;margin-bottom:1rem;font-size:.9rem}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:.6rem}
+.footer-links a{color:#cbd5e1;text-decoration:none;transition:var(--transition)}
+.footer-links a:hover{color:#fff;padding-left:5px}
+.footer-social{display:flex;gap:1rem;margin-top:1rem}
+.footer-social a{background:rgba(255,255,255,.1);width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:var(--transition);color:#fff;text-decoration:none}
+.footer-social a:hover{background:var(--accent);transform:translateY(-3px)}
+.copyright{text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;font-size:.85rem;color:#a0aec0}
+.animate{opacity:0;animation:fadeUp .7s forwards}
+.delay-1{animation-delay:.2s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.animate{opacity:1}}
+@media (max-width:1100px){.services-grid{grid-template-columns:repeat(2,1fr)}.exp-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:992px){.hero-content,.about-grid{flex-direction:column;text-align:center}.hero-title{font-size:2.8rem}.portfolio-grid{grid-template-columns:repeat(2,1fr)}.footer-container{grid-template-columns:repeat(2,1fr)}.skill-tags,.hero-buttons{justify-content:center}}
+@media (max-width:768px){.nav-links{position:fixed;top:70px;left:-100%;background:#fff;width:100%;flex-direction:column;align-items:center;padding:2rem;gap:1.5rem;transition:.3s;box-shadow:var(--shadow-md)}.nav-links.active{left:0}.hamburger{display:block}.hero-title{font-size:2.2rem}.services-grid,.portfolio-grid,.exp-grid{grid-template-columns:1fr}.footer-container{grid-template-columns:1fr;text-align:center}.footer-social{justify-content:center}}
+@media (max-width:576px){.logo{font-size:1.5rem}.hero-title{font-size:1.8rem}.section-title{font-size:1.8rem}.hero-buttons{flex-direction:column}.btn{text-align:center}}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Ivy Krystel Napoco",
-  "jobTitle": "E-Commerce Virtual Assistant",
-  "description": "Shopify, Amazon, eBay Virtual Assistant specializing in product listing, data entry, and e-commerce management."
-}
+{"@context":"https://schema.org","@type":"Person","name":"Ivy Krystel Napoco","jobTitle":"Technical Support Specialist and Web Developer","description":"Technical support, website building, and e-commerce store management (Shopify, eBay), with data entry and admin support."}
 </script>
 </head>
 <body>
 
-<!-- HEADER -->
 <header id="main-header">
   <div class="header-container">
     <a href="index.html" class="logo">Ivy<span>Napoco</span></a>
@@ -731,13 +127,10 @@ footer {
       <li><a href="works.html" class="nav-link">Portfolio</a></li>
       <li><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
-    <div class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="container">
@@ -746,13 +139,13 @@ footer {
         <h1 class="hero-title">Ivy Krystel Napoco</h1>
         <div class="position-rotator">
           <div class="position-rotator-inner">
+            <div class="position">Technical Support Specialist</div>
+            <div class="position">Web Developer &amp; Designer</div>
             <div class="position">E-Commerce Virtual Assistant</div>
-            <div class="position">Shopify Product Lister</div>
-            <div class="position">Amazon & eBay Specialist</div>
-            <div class="position">Data Entry & Admin Support</div>
+            <div class="position">Shopify &amp; eBay Support</div>
           </div>
         </div>
-        <p class="hero-subtitle">Professional E-Commerce Virtual Assistant helping online businesses manage Shopify, Amazon, and eBay stores through product listing, data entry, and store optimization.</p>
+        <p class="hero-subtitle">I resolve client tickets, troubleshoot technical problems, and build and maintain websites and online stores, with clear written updates at every step.</p>
         <div class="hero-buttons">
           <a href="works.html" class="btn btn-primary">View My Work</a>
           <a href="#" class="btn btn-outline">Download Resume</a>
@@ -765,7 +158,6 @@ footer {
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about">
   <div class="container">
     <h2 class="section-title">About Me</h2>
@@ -774,18 +166,21 @@ footer {
         <img src="about.jpg" alt="About Ivy">
       </div>
       <div class="about-text">
-        <h3>E-Commerce Virtual Assistant Specialist</h3>
-        <p>I am a dedicated E-Commerce Virtual Assistant with expertise in Shopify, Amazon, and eBay store management. I help businesses maintain accurate product listings, optimized descriptions, and organized inventory systems.</p>
-        <p>My focus is to support online sellers by handling repetitive and time-consuming tasks such as product uploads, order updates, and store maintenance so they can focus on growing their business.</p>
+        <h3>Technical Support &amp; Web Specialist</h3>
+        <p>I’m an IT graduate who handles client requests through CRM messages and support tickets. I find the cause of the problem, fix it or pass it on with complete details, and explain the result in plain language.</p>
+        <p>I also build and maintain websites and web systems with HTML, CSS, JavaScript, PHP, and MySQL, and I manage Shopify and eBay stores, so online businesses can rely on one person for both technical help and day-to-day operations.</p>
         <div class="skills">
           <h4>Core Skills</h4>
           <div class="skill-tags">
-            <span class="skill-tag">Shopify VA</span>
-            <span class="skill-tag">Amazon Listing</span>
+            <span class="skill-tag">Technical Support</span>
+            <span class="skill-tag">Ticket &amp; CRM Support</span>
+            <span class="skill-tag">Troubleshooting</span>
+            <span class="skill-tag">Documentation</span>
+            <span class="skill-tag">HTML / CSS / JavaScript</span>
+            <span class="skill-tag">PHP &amp; MySQL</span>
+            <span class="skill-tag">Shopify</span>
             <span class="skill-tag">eBay Store Management</span>
             <span class="skill-tag">Data Entry</span>
-            <span class="skill-tag">Product Upload</span>
-            <span class="skill-tag">SEO Product Listing</span>
           </div>
         </div>
       </div>
@@ -793,10 +188,33 @@ footer {
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services">
   <div class="container">
-    <h2 class="section-title">My E-Commerce Services</h2>
+    <h2 class="section-title">How I Can Help</h2>
+    <h3 class="group-title">Technical &amp; web support</h3>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-headset service-icon"></i>
+        <h3>Ticket Support</h3>
+        <p>Handling client requests through support tickets and CRM messages, with clear replies and on-time follow-through.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-screwdriver-wrench service-icon"></i>
+        <h3>Troubleshooting</h3>
+        <p>Finding the cause of software, website, and account issues, then fixing them or escalating with the steps already tried.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-laptop-code service-icon"></i>
+        <h3>Website Building &amp; Updates</h3>
+        <p>Responsive websites and page updates using HTML, CSS, JavaScript, and PHP.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-database service-icon"></i>
+        <h3>Web Systems</h3>
+        <p>Booking, inventory, and sales systems with MySQL databases and user accounts.</p>
+      </div>
+    </div>
+    <h3 class="group-title second">E-commerce &amp; admin support</h3>
     <div class="services-grid">
       <div class="service-card">
         <i class="fas fa-shopping-cart service-icon"></i>
@@ -815,40 +233,52 @@ footer {
       </div>
       <div class="service-card">
         <i class="fas fa-keyboard service-icon"></i>
-        <h3>Data Entry Services</h3>
-        <p>Fast and accurate data entry, spreadsheet organization, and product catalog updates.</p>
+        <h3>Data Entry &amp; Admin</h3>
+        <p>Accurate data entry, invoice processing, spreadsheet organization, and product catalog updates.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
 <section class="portfolio">
   <div class="container">
-    <h2 class="section-title">Case Studies</h2>
+    <h2 class="section-title">Projects &amp; Case Studies</h2>
+    <h3 class="group-title">Web systems I’ve built</h3>
+    <div class="services-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+      <div class="service-card">
+        <i class="fas fa-camera service-icon"></i>
+        <h3>Photo Studio Booking System</h3>
+        <p>Co-developed a booking and management system with packages, add-ons, inventory, and reports for Amari Self Photo Studio.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-boxes-stacked service-icon"></i>
+        <h3>Sales &amp; Inventory System</h3>
+        <p>Web-based inventory tracking and sales reporting with multi-branch user accounts, replacing manual record-keeping.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-folder-open service-icon"></i>
+        <h3>Barangay Management System</h3>
+        <p>A record management system that organizes and secures barangay data through a simple interface.</p>
+      </div>
+    </div>
+    <h3 class="group-title second">E-commerce case studies</h3>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-        <div class="portfolio-img">
-          <img src="shopify.jpg" alt="Shopify">
-        </div>
+        <div class="portfolio-img"><img src="shopify.jpg" alt="Shopify"></div>
         <div class="portfolio-overlay">
           <h3>Shopify Store Optimization</h3>
           <p>Improved product listings and SEO structure for better conversions.</p>
         </div>
       </div>
       <div class="portfolio-item">
-        <div class="portfolio-img">
-          <img src="Products.png" alt="Bulk Upload">
-        </div>
+        <div class="portfolio-img"><img src="Products.png" alt="Bulk Upload"></div>
         <div class="portfolio-overlay">
           <h3>Bulk Product Upload</h3>
           <p>Managed 200+ product uploads with optimized descriptions.</p>
         </div>
       </div>
       <div class="portfolio-item">
-        <div class="portfolio-img">
-          <img src="foxtail.png" alt="Management">
-        </div>
+        <div class="portfolio-img"><img src="foxtail.png" alt="Management"></div>
         <div class="portfolio-overlay">
           <h3>Store Management</h3>
           <p>Handled daily store updates and inventory tracking.</p>
@@ -858,82 +288,90 @@ footer {
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
+<section class="experience">
   <div class="container">
-    <h2 class="section-title">Client Testimonials</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <i class="fas fa-quote-left quote-icon"></i>
-        <p>"Very reliable VA. Helped us manage Shopify listings efficiently."</p>
-        <h4>- E-commerce Seller</h4>
+    <h2 class="section-title">Work Experience</h2>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <h3>Web Content Administrator / IT Assistant</h3>
+        <p class="exp-meta">Surigao Internet Marketing | 2025–2026</p>
+        <ul>
+          <li>Handled client requests through CRM messages and support tickets</li>
+          <li>Managed Shopify and eBay stores, including uploads and content edits</li>
+          <li>Set up customer accounts in Alarm.com and ASG RMRCloud</li>
+          <li>Processed invoices in Sola and Zoho</li>
+        </ul>
       </div>
-      <div class="testimonial-card">
-        <i class="fas fa-quote-left quote-icon"></i>
-        <p>"Fast and accurate data entry support. Highly recommended."</p>
-        <h4>- Online Store Owner</h4>
+      <div class="exp-card">
+        <h3>Web Developer / Designer</h3>
+        <p class="exp-meta">Freelance | 2024–2026</p>
+        <ul>
+          <li>Built and updated responsive websites and web systems</li>
+          <li>Turned client requests into working features and clean interfaces</li>
+          <li>Tested, fixed, and improved work based on client feedback</li>
+        </ul>
       </div>
-      <div class="testimonial-card">
-        <i class="fas fa-quote-left quote-icon"></i>
-        <p>"Great help with Amazon product uploads and SEO optimization."</p>
-        <h4>- Amazon Seller</h4>
+      <div class="exp-card">
+        <h3>Technical Support</h3>
+        <p class="exp-meta">Northeastern Mindanao Colleges Technical Club | 2023–2024</p>
+        <ul>
+          <li>Resolved computer, system setup, and software issues for teachers</li>
+          <li>Kept classroom and office operations running smoothly</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="faq-section">
   <div class="container">
     <h2 class="section-title">Frequently Asked Questions</h2>
     <div class="faq-container">
       <div class="faq-item">
         <input type="checkbox" id="faq1">
-        <label for="faq1">What is an E-Commerce Virtual Assistant?</label>
-        <div class="faq-content">
-          <p>A VA who helps manage online stores like Shopify, Amazon, and eBay including product listings and admin tasks.</p>
-        </div>
+        <label for="faq1">What kind of support do you provide?</label>
+        <div class="faq-content"><p>Written technical support through tickets and CRM messages: understanding the issue, troubleshooting, resolving it, and keeping the client updated until it’s closed.</p></div>
       </div>
       <div class="faq-item">
         <input type="checkbox" id="faq2">
-        <label for="faq2">What tools do you use?</label>
-        <div class="faq-content">
-          <p>Shopify, Amazon Seller Central, eBay, Google Sheets, and basic SEO tools.</p>
-        </div>
+        <label for="faq2">Do you still take e-commerce and admin work?</label>
+        <div class="faq-content"><p>Yes. I manage Shopify and eBay stores, product listings, order updates, data entry, and invoice processing.</p></div>
       </div>
       <div class="faq-item">
         <input type="checkbox" id="faq3">
-        <label for="faq3">Can you handle bulk product uploads?</label>
-        <div class="faq-content">
-          <p>Yes, I can manage large product catalogs efficiently and accurately.</p>
-        </div>
+        <label for="faq3">What tools do you use?</label>
+        <div class="faq-content"><p>Shopify, eBay, WordPress, Wix, Zoho, Sola, Alarm.com, ASG RMRCloud, Google Sheets, and MySQL, plus HTML, CSS, JavaScript, and PHP for web work.</p></div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq4">
+        <label for="faq4">Can you handle bulk product uploads?</label>
+        <div class="faq-content"><p>Yes, I can manage large product catalogs efficiently and accurately.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact-section">
   <div class="container">
-    <h2 class="section-title">Hire Me as Your Virtual Assistant</h2>
-    <p class="contact-intro">Looking for a reliable E-Commerce Virtual Assistant for Shopify, Amazon, or eBay?</p>
+    <h2 class="section-title">Let’s Work Together</h2>
+    <p class="contact-intro">Need reliable technical support, a website built or updated, or help running your online store? Send me a message.</p>
     <div class="contact-center">
       <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+      <a href="mailto:napocoik@gmail.com" class="btn btn-outline">Email Me</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-container">
     <div class="footer-col">
       <h3>Ivy<span>Napoco</span></h3>
-      <p>E-Commerce Virtual Assistant specializing in Shopify, Amazon, eBay management, and data entry.</p>
+      <p>Technical support, web development, and e-commerce support for online businesses.</p>
       <div class="footer-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
     <div class="footer-col">
@@ -948,61 +386,39 @@ footer {
     </div>
     <div class="footer-col">
       <h3>Work With Me</h3>
-      <p>Ready to start your project? Let's discuss how I can help you achieve your goals.</p>
-      <a href="contact.html" class="btn-primary" style="display: inline-block; padding: 0.5rem 1.2rem; font-size: 0.85rem;">Get In Touch</a>
+      <p>Ready to start? Let’s talk about how I can help.</p>
+      <a href="contact.html" class="btn btn-primary" style="padding:.5rem 1.2rem;font-size:.85rem">Get In Touch</a>
     </div>
   </div>
   <div class="copyright">
-    <p>&copy; 2026 Ivy Krystel Napoco | E-Commerce Virtual Assistant. All rights reserved.</p>
+    <p>&copy; 2026 Ivy Krystel Napoco | Technical Support &amp; E-Commerce Virtual Assistant. All rights reserved.</p>
   </div>
 </footer>
 
 <script>
-// Sticky header on scroll
-window.addEventListener('scroll', function() {
-  const header = document.getElementById('main-header');
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
+window.addEventListener('scroll',function(){
+  document.getElementById('main-header').classList.toggle('scrolled',window.scrollY>50);
 });
-
-// Mobile menu toggle
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-
-if (hamburger) {
-  hamburger.addEventListener('click', function() {
-    navLinks.classList.toggle('active');
-  });
-}
-
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-  });
+const hamburger=document.getElementById('hamburger');
+const navLinks=document.getElementById('navLinks');
+if(hamburger){hamburger.addEventListener('click',()=>navLinks.classList.toggle('active'));}
+document.querySelectorAll('.nav-link').forEach(link=>{
+  link.addEventListener('click',()=>navLinks.classList.remove('active'));
 });
-
-// Active nav link based on current page
-const currentPage = window.location.pathname.split("/").pop();
-document.querySelectorAll('.nav-link').forEach(link => {
-  const linkPage = link.getAttribute('href');
-  if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
-    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+const currentPage=window.location.pathname.split("/").pop();
+document.querySelectorAll('.nav-link').forEach(link=>{
+  const linkPage=link.getAttribute('href');
+  if(linkPage===currentPage||(currentPage===""&&linkPage==="index.html")){
+    document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
     link.classList.add('active');
   }
 });
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click',function(e){
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    const id=this.getAttribute('href');
+    const target=id.length>1?document.querySelector(id):null;
+    if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}
   });
 });
 </script>
