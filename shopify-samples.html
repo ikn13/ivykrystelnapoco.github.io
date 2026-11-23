@@ -1,596 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Shopify Samples - Ivy Krystel Napoco | E-Commerce VA</title>
 <meta name="description" content="Shopify store samples showcasing theme customization, product listing, collections, and mobile optimization by Ivy Krystel Napoco." />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
-:root {
-  --primary: #0f2b3d;
-  --primary-dark: #082032;
-  --accent: #2c7da0;
-  --accent-light: #61a5c2;
-  --gray-bg: #f8fafc;
-  --text-dark: #1e293b;
-  --text-muted: #475569;
-  --white: #ffffff;
-  --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
-  --shadow-md: 0 20px 25px -5px rgba(0,0,0,0.08);
-  --transition: all 0.3s ease;
-}
+:root{--ink:#172033;--muted:#5b6478;--bg:#f4f5fc;--lav:#e8e8ff;--indigo:#4b4fe0;--indigo-d:#3338b8;--mint:#2fcf8e;--line:#dfe1f2;--r:22px;--shadow:0 24px 50px -24px rgba(34,38,120,.35)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.5rem}
+section{padding:4.5rem 0}
+.h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:.8rem;max-width:18ch}
+.lead{color:var(--muted);max-width:56ch;margin-bottom:2.5rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .2s,background .2s}
+.btn-primary{background:var(--indigo);color:#fff;box-shadow:0 10px 24px -10px var(--indigo)}
+.btn-primary:hover{background:var(--indigo-d);transform:translateY(-2px)}
+.btn-ghost{background:#fff;border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--indigo);color:var(--indigo)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--indigo);outline-offset:3px;border-radius:8px}
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;background:linear-gradient(90deg,var(--indigo),var(--mint));transform:scaleX(0);transform-origin:left;z-index:100}
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* header */
+header{position:fixed;top:.8rem;left:0;right:0;z-index:50}
+.bar{max-width:1180px;margin:0 auto;padding:.6rem .7rem .6rem 1.4rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px;width:calc(100% - 3rem);transition:padding .3s,box-shadow .3s,background .3s}
+header.scrolled .bar{padding-top:.4rem;padding-bottom:.4rem;box-shadow:0 12px 30px -16px rgba(34,38,120,.35);background:rgba(255,255,255,.95)}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.3rem;text-decoration:none}
+.logo b{color:var(--indigo)}
+.nav{display:flex;gap:.3rem;list-style:none;align-items:center}
+.nav a{display:block;padding:.5rem 1rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.93rem;transition:background .2s}
+.nav a:hover{background:var(--lav)}
+.nav a.active{background:var(--lav);color:var(--indigo-d)}
+.nav .cta{background:var(--ink);color:#fff}
+.nav .cta:hover{background:var(--indigo)}
+.burger{display:none;background:none;border:0;font-size:1.3rem;padding:.5rem .8rem;cursor:pointer;color:var(--ink)}
 
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-dark);
-  background-color: var(--white);
-  line-height: 1.5;
-  scroll-behavior: smooth;
-}
+/* services */
+.head{padding:9rem 0 2.5rem;position:relative;overflow:hidden}
+.head::before{content:'';position:absolute;width:560px;height:560px;right:-180px;top:-160px;background:radial-gradient(circle,#cfd1ff 0%,transparent 68%);animation:drift 14s ease-in-out infinite}
+.head .wrap{position:relative}
+.head h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;margin-bottom:1.2rem;max-width:14ch}
+.head h1 span{color:var(--indigo)}
+.head p{color:var(--muted);font-size:1.1rem;max-width:54ch}
+.head h1,.head p{opacity:0;animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+.head p{animation-delay:.15s}
+.back{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;text-decoration:none;color:var(--indigo-d);margin-bottom:1.4rem;transition:gap .2s}
+.back:hover{gap:.8rem}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2rem}
+.scard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1rem 1rem 1.6rem;display:flex;flex-direction:column;transition:box-shadow .25s,border-color .25s,transform .25s}
+.scard:hover{box-shadow:var(--shadow);border-color:#c9cbff;transform:translateY(-6px)}
+.js .scard.reveal.in{transition:transform .25s,box-shadow .25s,border-color .25s}
+.js .scard.reveal.in:hover{transform:translateY(-6px)}
+.frame{border-radius:14px;overflow:hidden;border:1px solid var(--line);margin-bottom:1.3rem;background:var(--lav)}
+.frame-bar{display:flex;gap:.35rem;padding:.55rem .8rem;background:#fff;border-bottom:1px solid var(--line)}
+.frame-bar i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.frame-bar i:first-child{background:#ff8f9e}.frame-bar i:nth-child(2){background:#ffd36b}.frame-bar i:nth-child(3){background:var(--mint)}
+.frame-img{height:210px;overflow:hidden;display:grid;place-items:center}
+.frame-img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s;display:block}
+.scard:hover .frame-img img{transform:scale(1.06)}
+.frame-img.ph{background:linear-gradient(135deg,#172033,#3338b8);color:var(--mint);font-size:3.2rem}
+.sbody{padding:0 .6rem;display:flex;flex-direction:column;flex-grow:1}
+.sbody h3{font-size:1.25rem;margin-bottom:.6rem}
+.sbody>p{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
+.feat{list-style:none;margin-bottom:1.5rem}
+.feat li{font-size:.9rem;padding:.3rem 0 .3rem 1.7rem;position:relative}
+.feat li::before{content:'\f00c';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;left:0;top:.42rem;width:1.15rem;height:1.15rem;border-radius:50%;background:var(--lav);color:var(--indigo);font-size:.6rem;display:grid;place-items:center}
+.sbody .btn{margin-top:auto;align-self:flex-start;padding:.7rem 1.3rem;font-size:.88rem}
+.note{display:flex;gap:.9rem;align-items:flex-start;background:var(--lav);border-radius:18px;padding:1.2rem 1.5rem;margin-top:2rem;color:var(--indigo-d);font-size:.93rem}
+.note i{margin-top:.25rem}
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
+/* cta + footer */
+.contact{background:linear-gradient(135deg,var(--indigo) 0%,#2c2fa8 100%);color:#fff;border-radius:44px;padding:4rem 2rem;text-align:center;position:relative;overflow:hidden}
+.contact::before{content:'';position:absolute;width:380px;height:380px;border-radius:50%;background:rgba(255,255,255,.08);right:-100px;top:-140px;animation:drift 10s ease-in-out infinite}
+.contact h2{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;margin:0 auto 1rem;max-width:16ch;position:relative}
+.contact p{max-width:50ch;margin:0 auto 2rem;color:#dcdeff;position:relative}
+.contact .btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;position:relative}
+.contact .btn-primary{background:#fff;color:var(--indigo-d);box-shadow:none}
+.contact .btn-primary:hover{background:var(--lav)}
+.contact .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.contact .btn-ghost:hover{border-color:#fff}
+footer{padding:3.5rem 0 2rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.f-grid h4{margin-bottom:.8rem;font-family:'Bricolage Grotesque',sans-serif}
+.f-grid p{color:var(--muted);font-size:.92rem;max-width:34ch}
+.f-grid ul{list-style:none}
+.f-grid li{margin-bottom:.4rem}
+.f-grid li a{color:var(--muted);text-decoration:none;font-size:.92rem}
+.f-grid li a:hover{color:var(--indigo)}
+.social{display:flex;gap:.6rem;margin-top:1rem}
+.social a{width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;text-decoration:none;transition:background .2s,color .2s,transform .2s}
+.social a:hover{background:var(--indigo);color:#fff;transform:translateY(-4px) rotate(8deg)}
+.copy{border-top:1px solid var(--line);padding-top:1.4rem;font-size:.85rem;color:var(--muted);text-align:center}
 
-/* Header Styles */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  transition: var(--transition);
-}
-
-header.scrolled {
-  background: rgba(255,255,255,0.98);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--primary);
-  text-decoration: none;
-}
-
-.logo span {
-  color: var(--accent);
-}
-
-.nav-links {
-  display: flex;
-  gap: 2.2rem;
-  list-style: none;
-}
-
-.nav-link {
-  text-decoration: none;
-  font-weight: 500;
-  color: var(--text-dark);
-  transition: var(--transition);
-}
-
-.nav-link:hover, .nav-link.active {
-  color: var(--accent);
-}
-
-.hamburger {
-  display: none;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: var(--primary);
-}
-
-/* Main Content */
-main {
-  max-width: 1280px;
-  margin: 120px auto 3rem;
-  padding: 0 2rem;
-  animation: fadeIn 0.6s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: var(--primary);
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-h1::after {
-  content: '';
-  width: 80px;
-  height: 4px;
-  background: var(--accent);
-  display: block;
-  margin: 15px auto;
-  border-radius: 2px;
-}
-
-.subtitle {
-  text-align: center;
-  max-width: 800px;
-  margin: 10px auto 40px;
-  color: var(--text-muted);
-  font-size: 1.1rem;
-}
-
-/* Sample Grid - 3 cards per row */
-.sample-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.sample-card {
-  background: var(--gray-bg);
-  border-radius: 24px;
-  box-shadow: var(--shadow-sm);
-  padding: 1.5rem;
-  transition: var(--transition);
-  border: 1px solid #eef2f6;
-}
-
-.sample-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-md);
-}
-
-.sample-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 16px;
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.sample-card:hover img {
-  transform: scale(1.02);
-}
-
-.sample-card h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--primary);
-  font-size: 1.3rem;
-  margin: 10px 0;
-}
-
-.sample-card p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-}
-
-.features {
-  margin: 15px 0;
-  list-style: none;
-}
-
-.features li {
-  font-size: 0.85rem;
-  padding: 6px 0 6px 24px;
-  position: relative;
-  color: var(--text-dark);
-}
-
-.features li::before {
-  content: '\f00c';
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 900;
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-size: 0.8rem;
-}
-
-.actions {
-  margin-top: 20px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background: var(--accent);
-  color: var(--white);
-  border-radius: 40px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: var(--transition);
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: var(--primary);
-  transform: translateX(5px);
-}
-
-.btn i {
-  font-size: 0.8rem;
-}
-
-/* Disclaimer */
-.disclaimer {
-  background: var(--gray-bg);
-  padding: 20px 25px;
-  border-left: 4px solid var(--accent);
-  margin-top: 50px;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  border-radius: 12px;
-}
-
-.disclaimer i {
-  color: var(--accent);
-  margin-right: 8px;
-}
-
-/* Footer */
-footer {
-  background: var(--primary);
-  color: white;
-  padding: 3rem 0 1rem;
-  margin-top: 2rem;
-}
-
-.footer-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 0 2rem;
-  margin-bottom: 2rem;
-}
-
-.footer-col h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: white;
-}
-
-.footer-col h3 span {
-  color: var(--accent-light);
-}
-
-.footer-col p {
-  color: #cbd5e1;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-}
-
-.footer-links {
-  list-style: none;
-}
-
-.footer-links li {
-  margin-bottom: 0.6rem;
-}
-
-.footer-links a {
-  color: #cbd5e1;
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.footer-links a:hover {
-  color: white;
-  padding-left: 5px;
-}
-
-.footer-social {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.footer-social a {
-  background: rgba(255,255,255,0.1);
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: var(--transition);
-  color: white;
-  text-decoration: none;
-}
-
-.footer-social a:hover {
-  background: var(--accent);
-  transform: translateY(-3px);
-}
-
-.btn-small {
-  display: inline-block;
-  background: var(--accent);
-  color: white;
-  padding: 0.5rem 1.2rem;
-  border-radius: 40px;
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-.btn-small:hover {
-  background: white;
-  color: var(--primary);
-  transform: translateY(-2px);
-}
-
-.copyright {
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 1.5rem;
-  font-size: 0.85rem;
-  color: #a0aec0;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .sample-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    background: white;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    gap: 1.5rem;
-    transition: 0.3s;
-    box-shadow: var(--shadow-md);
-  }
-  .nav-links.active {
-    left: 0;
-  }
-  .hamburger {
-    display: block;
-  }
-  h1 {
-    font-size: 2.5rem;
-  }
-  .sample-grid {
-    grid-template-columns: 1fr;
-  }
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .footer-social {
-    justify-content: center;
-  }
-  .footer-col h3::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 576px) {
-  .logo {
-    font-size: 1.5rem;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  .subtitle {
-    font-size: 0.95rem;
-  }
-  .sample-card {
-    padding: 1rem;
-  }
-  .actions {
-    flex-direction: column;
-  }
-  .btn {
-    justify-content: center;
-  }
+/* motion */
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes reveal{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,24px)}}
+.js .reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.head h1,.head p{opacity:1}.js .reveal{opacity:1;transform:none}}
+@media (max-width:1100px){.sgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:960px){.f-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){
+ .burger{display:block}
+ .nav{position:absolute;top:calc(100% + .5rem);left:0;right:0;background:#fff;border:1px solid var(--line);border-radius:24px;flex-direction:column;padding:.8rem;display:none}
+ .nav.open{display:flex}
+ .bar{position:relative}
+ section{padding:3.4rem 0}
+ .f-grid,.sgrid{grid-template-columns:1fr}
+ .contact{border-radius:32px}
 }
 </style>
 </head>
 <body>
+<div class="progress" id="progress"></div>
 
-<!-- HEADER -->
-<header id="main-header">
-  <div class="header-container">
-    <a href="index.html" class="logo">Ivy<span>Napoco</span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="about.html" class="nav-link">About</a></li>
-      <li><a href="services.html" class="nav-link">Services</a></li>
-      <li><a href="works.html" class="nav-link">Portfolio</a></li>
-      <li><a href="contact.html" class="nav-link">Contact</a></li>
+<header>
+  <div class="bar">
+    <a href="index.html" class="logo">Ivy<b>Napoco</b></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+    <ul class="nav" id="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="works.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html" class="cta">Contact</a></li>
     </ul>
-    <div class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
   </div>
 </header>
 
 <main>
-  <h1>Shopify Sample Stores</h1>
-  <p class="subtitle">
-    These stores showcase my Shopify skills including theme customization,
-    product page setup, collections, and mobile optimization.
-  </p>
+<section class="head" style="padding-bottom:1rem">
+  <div class="wrap">
+    <a href="works.html" class="back"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
+    <h1>Shopify <span>sample stores.</span></h1>
+    <p>These stores showcase my Shopify skills including theme customization, product page setup, collections, and mobile optimization.</p>
+  </div>
+</section>
 
-  <div class="sample-grid">
-    <div class="sample-card">
-      <img src="Shine_Beauty_&_ Co..png" alt="Salon Store">
-      <h3>Salon & Beauty Store</h3>
-      <p>Clean Shopify layout focused on conversion and product presentation for beauty industry.</p>
-      <ul class="features">
-        <li>Custom theme styling</li>
-        <li>Product & collection setup</li>
-        <li>Product page optimization</li>
-        <li>Mobile-first design</li>
-        <li>SEO optimized listings</li>
-      </ul>
-      <div class="actions">
-        <a href="https://myshinebeauty.com/" target="_blank" class="btn">View Live Store <i class="fas fa-external-link-alt"></i></a>
-      </div>
+<section style="padding:1rem 0 2rem">
+  <div class="wrap">
+    <div class="sgrid">
+      <article class="scard reveal"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><div class="frame-img"><img src="Shine_Beauty_%26_%20Co..png" alt="Salon store" /></div></div><div class="sbody"><h3>Salon &amp; Beauty Store</h3><p>Clean Shopify layout focused on conversion and product presentation for beauty industry.</p><ul class="feat"><li>Custom theme styling</li><li>Product &amp; collection setup</li><li>Product page optimization</li><li>Mobile-first design</li><li>SEO optimized listings</li></ul><a href="https://myshinebeauty.com/" target="_blank" rel="noopener" class="btn btn-primary">View live store <i class="fas fa-arrow-up-right-from-square"></i></a></div></article>
+      <article class="scard reveal"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><div class="frame-img"><img src="foxtail.png" alt="Landing page" /></div></div><div class="sbody"><h3>High-Converting Landing Page</h3><p>Optimized Shopify landing page designed for maximum conversion and user engagement.</p><ul class="feat"><li>Landing page design</li><li>Sections customization</li><li>CTA optimization</li><li>Fast loading performance</li></ul><a href="https://foxtailhairsalon.com/" target="_blank" rel="noopener" class="btn btn-primary">View live store <i class="fas fa-arrow-up-right-from-square"></i></a></div></article>
+      <article class="scard reveal"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><div class="frame-img ph"><i class="fas fa-bag-shopping"></i></div></div><div class="sbody"><h3>Fashion E-commerce Store</h3><p>Complete Shopify setup for fashion brand with collections, variants, and seamless checkout.</p><ul class="feat"><li>Product variant management</li><li>Collection organization</li><li>Inventory tracking</li><li>Payment gateway setup</li></ul><a href="#" class="btn btn-primary">View demo <i class="fas fa-arrow-right"></i></a></div></article>
     </div>
+    <div class="note reveal"><i class="fas fa-circle-info"></i><p><strong>Note:</strong> These are live Shopify stores I’ve worked on. All client information is confidential, and stores are shared with permission.</p></div>
+  </div>
+</section>
 
-    <div class="sample-card">
-      <img src="foxtail.png" alt="Landing Page">
-      <h3>High-Converting Landing Page</h3>
-      <p>Optimized Shopify landing page designed for maximum conversion and user engagement.</p>
-      <ul class="features">
-        <li>Landing page design</li>
-        <li>Sections customization</li>
-        <li>CTA optimization</li>
-        <li>Fast loading performance</li>
-      </ul>
-      <div class="actions">
-        <a href="https://foxtailhairsalon.com/" target="_blank" class="btn">View Live Store <i class="fas fa-external-link-alt"></i></a>
-      </div>
-    </div>
-
-    <div class="sample-card">
-      <img src="https://placehold.co/600x400/1a365d/ffffff?text=Fashion+Store" alt="Fashion Shopify Store">
-      <h3>Fashion E-commerce Store</h3>
-      <p>Complete Shopify setup for fashion brand with collections, variants, and seamless checkout.</p>
-      <ul class="features">
-        <li>Product variant management</li>
-        <li>Collection organization</li>
-        <li>Inventory tracking</li>
-        <li>Payment gateway setup</li>
-      </ul>
-      <div class="actions">
-        <a href="#" class="btn">View Demo <i class="fas fa-arrow-right"></i></a>
+<section style="padding:3rem 0 1rem">
+  <div class="wrap">
+    <div class="contact reveal">
+      <h2>Need a Shopify store like this?</h2>
+      <p>Tell me about your products and I’ll get back to you with how I can help.</p>
+      <div class="btns">
+        <a href="contact.html" class="btn btn-primary">Get in touch</a>
+        <a href="mailto:napocoik@gmail.com" class="btn btn-ghost"><i class="fas fa-envelope"></i> Email me</a>
       </div>
     </div>
   </div>
-
-  <div class="disclaimer">
-    <i class="fas fa-info-circle"></i> 
-    <strong>Note:</strong> These are live Shopify stores I've worked on. All client information is confidential, and stores are shared with permission.
-  </div>
+</section>
 </main>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-container">
-    <div class="footer-col">
-      <h3>Ivy<span>Napoco</span></h3>
-      <p>E-Commerce Virtual Assistant & Web Designer specializing in Shopify, Amazon, eBay management, and creative solutions.</p>
-      <div class="footer-social">
-        <a href="https://www.facebook.com/iknap0c8/"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://github.com/ikn13"><i class="fab fa-github"></i></a>
-        <a href="www.linkedin.com/in/ivy-krystel-napoco-927964267"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com/yvi_krystel/"><i class="fab fa-instagram"></i></a>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="index.html" class="logo">Ivy<b>Napoco</b></a>
+        <p style="margin-top:.6rem">Technical support, web development, and e-commerce support for online businesses.</p>
+        <div class="social">
+          <a href="https://www.facebook.com/iknap0c8/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://github.com/ikn13" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ivy-krystel-napoco-927964267" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/yvi_krystel/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="works.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Work with me</h4>
+        <p>Ready to start? Let’s talk about how I can help.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;padding:.6rem 1.3rem;font-size:.85rem">Hire me</a>
       </div>
     </div>
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="works.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Work With Me</h3>
-      <p>Ready to start your project? Let's discuss how I can help you achieve your goals.</p>
-      <a href="contact.html" class="btn-small">Get In Touch</a>
-    </div>
-  </div>
-  <div class="copyright">
-    <p>&copy; 2026 Ivy Krystel Napoco | E-Commerce Virtual Assistant & Web Designer. All rights reserved.</p>
+    <p class="copy">&copy; 2026 Ivy Krystel Napoco. All rights reserved.</p>
   </div>
 </footer>
 
 <script>
-// Sticky header
-window.addEventListener('scroll', function() {
-  const header = document.getElementById('main-header');
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
-
-// Mobile menu toggle
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-
-if (hamburger) {
-  hamburger.addEventListener('click', function() {
-    navLinks.classList.toggle('active');
-  });
-}
-
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-  });
-});
-
-// Active nav link based on current page
-const currentPage = window.location.pathname.split("/").pop();
-document.querySelectorAll('.nav-link').forEach(link => {
-  const linkPage = link.getAttribute('href');
-  if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
-    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
-  }
-});
+document.documentElement.classList.add('js');
+const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const hd=document.querySelector('header'),pg=document.getElementById('progress');
+function onScroll(){hd.classList.toggle('scrolled',scrollY>30);const m=document.documentElement.scrollHeight-innerHeight;pg.style.transform='scaleX('+(m>0?scrollY/m:0)+')'}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+document.querySelectorAll('.sgrid .scard').forEach((el,i)=>el.style.setProperty('--d',(i%4)*.1+'s'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
